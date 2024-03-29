@@ -1,0 +1,3093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xsun Token</title>
+
+
+
+
+    <!-- هنا يتم وضع الأنماط الخاصة بوسائط الاعلام -->
+    <style>
+        /* قواعد CSS العامة هنا */
+
+        /* قواعد CSS للشاشات الصغيرة (الأجهزة المحمولة) */
+        @media screen and (max-width: 768px) {
+            /* قواعد CSS المناسبة للشاشات الصغيرة هنا */
+        }
+
+        /* قواعد CSS للشاشات المتوسطة (الأجهزة اللوحية) */
+        @media screen and (min-width: 769px) and (max-width: 1024px) {
+            /* قواعد CSS المناسبة للشاشات المتوسطة هنا */
+        }
+
+        /* قواعد CSS للشاشات الكبيرة (الأجهزة الحاسوبية) */
+        @media screen and (min-width: 1025px) {
+            /* قواعد CSS المناسبة للشاشات الكبيرة هنا */
+        }
+    </style>
+</head>
+<body>
+    <!-- محتوى الصفحة يأتي هنا -->
+
+
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xsun Token</title>
+
+
+<div id="authForm" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(0, 0, 0, 0.5); padding: 30px; width: 80%; text-align: center;">
+  <!-- محتوى الصفحة -->
+
+  
+  
+
+  
+<h2 style="color: white; font-size: 7vw;">
+ 𝓦𝓮𝓵𝓬𝓸𝓶𝓮 𝓣𝓸 𝓧𝓼𝓾𝓷! 🌟
+</h2>
+
+
+
+  <input type="email" placeholder="Email" id="userEmail" style="width: 80%; margin-bottom: 10px;">
+  <input type="password" placeholder="Password" id="userPassword" style="width: 80%; margin-bottom: 10px;">
+  <br><br>
+  <input type="text" placeholder="Invitation Code (Required)" id="invitationCode" style="width: 80%; margin-bottom: 10px;">
+  <br><br>
+
+  <input type="checkbox" id="agreeCheckbox" style="margin-right: 5px;">
+  <label for="agreeCheckbox" style="color: white;">I Agree</label>
+  <a href="https://xsunapp.github.io/Privacy-ploicy-Xsun-app/" target="_blank" style="color: white; margin-left: 20px;">Privacy Policy</a> 
+
+  <br><br>
+  <button id="signUpButton" style="background-color: wheat; color: black; margin-right: 10px;">Sign Up</button>
+  <button id="signInButton" style="background-color: green; color: white; margin-left: 10px;">Sign In</button>
+  <br><br>
+
+  <div>
+    <button id="forgetPasswordButton" style="background-color: red; color: white;">Forget Password</button>
+  </div>
+
+  <div id="successMessage" style="color: red;"></div>
+
+  
+
+    <p style="color:whitet; font-size: 12px;">🔗 𝕏𝕊𝕌ℕ ℕ𝔼𝕋𝕎𝕆ℝ𝕂 ℕ𝔼𝔸ℝ 𝔹𝕃𝕆ℂ𝕂ℍ𝔸𝕀ℕ. 🔗</p>
+
+
+      
+
+  </div>
+</div>
+
+
+
+
+
+<!-- Add this new input field for password reset -->
+<div id="passwordResetForm" style="display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 60%;">
+  <h2>Forget Password</h2>
+  <input type="email" placeholder="Email" id="resetEmail" style="width: 80%;"><br><br>
+  <button id="sendResetEmailButton">Send Reset Email</button>
+  <button id="cancelResetButton">Cancel</button>
+</div>
+
+
+
+
+<div class="sidebar" id="sidebar">
+
+  <button id="sidebar-button">☰</button>
+  <!-- إطار لعرض الصورة -->
+  <div class="image-frame" id="imageFrame">
+    <img src="default-image.jpg" alt="User Image" id="userImage">
+    <input type="file" accept="image/*" id="imageInput" class="image-input">
+  </div>
+
+<div class="sidebar-circle">
+  
+  
+  
+<p style="background-color: white; color: black; font-size: 18px;">UID: <span id="userUID"></span></p>
+
+
+</div>
+
+<a href="#" onclick="showMiningInterface()">Home</a>
+<a href="#" onclick="showEarnings()">Wallet</a>
+<a href="#" onclick="showInviteFriends()">Referral</a>
+<a href="#" onclick="showRoadmap()">Roadmap</a>
+<a href="#" onclick="showKyc()">kyc</a>
+<a id="telegramLink" href="https://bit.ly/3VCIpSq">android</a>
+
+<button id="signOutButton" style="margin-left: 15px;">Sign Out</button>
+
+  
+    
+    
+</div>
+
+
+
+
+
+<div id="secretContent" style="background-color: white;">
+    <!-- محتوى الصفحة -->
+
+
+
+
+
+<div style="position: absolute; text-align: center; top: 0%; left: 120vw; transform: translate( -50vw , 100vw); z-index: 9999; display: flex; flex-direction: row; justify-content: center;">
+
+
+    <a href="https://www.instagram.com/xsun_team_official?igsh=OGQ5ZDc2ODk2ZA==" style="margin-right: 10px;">
+      <img src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/2048px-Instagram_logo_2016.svg.png?alt=media&token=aecc3bec-9f5b-4235-aae0-d1ca6ee12de8" alt="instagram" width="30" height="30">
+    </a>
+    <a href="https://x.com/team_xsun?s=09">
+              <img src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/new-2023-twitter-logo-x-icon-design_1017-45418.jpg?alt=media&token=08143d22-606f-464b-8a0e-0974c41fb45e" alt="X" width="30" height="30">
+            </a>
+    <div class="custom-button-container" onclick="window.open('whatsapp://message/OGBVOC6HW72YF1', '_blank');" style="cursor: pointer;">
+      <img src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/512px-WhatsApp.svg.png?alt=media&token=05d41c4f-dcfb-4fcf-9ae1-fdf8d4f976ec" alt="whatsapp" width="30" height="30">
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+<div style="position: absolute; top: 18%; left: 37.8%; z-index: 9999;">
+   <img src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/near-9828546-7947908.png?alt=media&token=0c6a6e03-4528-4f67-97a6-2f74e2b17543" alt="icon" width="20" height="20">
+</div>
+
+
+  
+  
+
+  
+  
+  
+  
+
+  
+<p style="color: black; position: absolute; top: 16.7%; z-index: 9999; left: 0%; font-size: 1.8vw; background-color: seagreen;">NETWORK NEAR BLOCKCHAIN</p>
+
+
+
+
+  
+
+
+  <div style="display: flex; align-items: center; justify-content: flex-end; border-radius:0; position: relative; top: 0vh;">
+  <div style="width: 5vw; height: 5vw; display: flex; align-items: center; justify-content: center; border-radius: 50%; background-image: url('https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/bitcoin-225079_640.png?alt=media&token=e226582c-f4a8-4ee6-819c-0588d1a1a80f'); background-size: cover; background-position: center; margin-right: 1vw;"></div>
+  <span id="btcBalanceAmount" style="margin-right: 1vw; font-size: 4.5vw; color: black;">0.00000000000</span>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="position: absolute; top: 16vw; right: 5.7vw; z-index: 9999;">
+   <img src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/internxt.png?alt=media&token=174fec9c-6370-40ae-b094-449bf4e3ec1c" alt="icon" width="60vw" height="60vw">
+</div>
+
+
+
+
+<div style="position: absolute; top: 17vh; right: 4.8vw; z-index: 9999; color: black; font-size: 3vw; text-align: center;">
+    <span class="same-style-bold">Total Supply<br> 36666</span>
+</div>
+
+<div style="position: absolute; top: 61vh; left: 51vw; z-index: 9999;">
+   <img src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/immutable-x-imx-glass-crypto-coin-3d-illustration-free-png.png?alt=media&token=5cf5a220-fed2-41b8-a1fe-035e0e3c9a6e" alt="icon" width="40vw" height="40vw">
+</div>
+
+
+
+
+
+<div style="position: absolute; top: 27%; left: 2%; width: 95vw; text-align: left;">
+  <div class="info-box" style="margin-top: 0px; background-color: black; padding: 2vw; border-radius: 5px; border: none;">
+    <p style="font-size: 6vw; margin: 0;">Time Left: <span id="countdownContainer"></span></p>
+    <hr style="border: none; border-bottom: 0.1vw solid white; margin: 1vw 0; width: 80%;">
+    <p style="font-size: 6vw; margin: 1vw 0 0 0;">Balance: <span id="balance">0.0000000000</span></p>
+    <hr style="border: none; border-bottom: 0.1vw solid white; margin: 1vw 0; width: 80%;">
+
+    <p id="balanceInUSD" style="font-size: 6vw; margin: 1vw 0; width: 90%; margin-left: 0px;">Balance in USD: $0.00</p>
+    <hr style="border: none; border-bottom: 0.1vw solid white; margin: 1vw 0; width: 80%;">
+  </div>
+</div>
+
+
+<button id="addBtcButton" style="background-color: seagreen; font-size: 3vw; z-index: 9999; position: absolute; top: 56.5%; right: 35%; padding: 2vw 3vw; border: none; border-radius: 1vw; box-shadow: 0.2vw 0.4vw 0.8vw rgba(0, 0, 0, 0.3); cursor: pointer;">Start Mining</button>
+
+
+
+
+
+  <button id="startMiningButton" onclick="startMining()" style="position: absolute; top: 60px; z-index: 999; display: none;">Start Mining</button>
+
+  <div id="confirmationDialog" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border: 1px solid #ccc; z-index: 10002;">
+    <p>Are you sure you want to logout?</p>
+      <button id="yesButton" style="margin-right: 20px;">Yes</button>
+      <button id="noButton" style="margin-left: 20px;">No</button>
+  </div>
+
+
+  
+ <button id="withdrawButton" disabled onclick="withdrawAmount()" class="disabled" style="color: white; position: absolute; top: 83%; left: 11%; transform: translate(-50%, -50%); z-index: 9999; padding: 2vw 3vw; border: none; border-radius: 1vw; background-color: seagreen;">Withdraw<span id="withdrawMessage" style="display: none;"></span></button>
+
+  
+  
+  
+  
+<div style="position: absolute; top: 75.5%; left: 33%; transform: translate(-50%, -50%);">
+    <div class="input-container" style="margin-top: 2vw;">
+        <input type="text" id="enterWalletAddress" placeholder="Enter Wallet Address" style="width: 60vw; height: 3vh; font-size: 3.3vw;" readonly onfocus="this.blur()">
+    </div>
+</div>
+
+<div style="position: absolute; top: 68%; left: 26%; transform: translate(-50%, -50%);">
+    <div class="input-container" style="margin-bottom: 5vh;">
+        <div style="display: flex; align-items: center;">
+            <input type="text" id="amount" placeholder="Enter the amount" style="width: 30vw; height: 2vh; font-size: 3vw;" readonly onfocus="this.blur()">
+            <button onclick="fillMax()" style="font-size: 2.7vw; margin-left: 2vw;">Max</button>
+        </div>
+    </div>
+</div>
+
+
+<div style="position: absolute; top: 57vh; left: 2vw;">
+    <select id="networkSelect" style="width: 20vw; height: 2.5vh; font-size: 3vw;">
+        <option value="NEAR">NEAR</option>
+        <option value="BSC20">BSC20</option>
+        <option value="ERC20">ERC20</option>
+        <option value="TRC20">TRC20</option>
+        <option value="BTC">BTC</option>
+    </select>
+</div>
+
+
+
+  
+  
+
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<div id="navButtons" style="position: fixed; bottom: 0; left: 0; background-color: white; padding: 1px; display: flex; justify-content: space-between; width: 100%;">
+<button onclick="showInviteFriends()">👥 Referral</button>
+  
+<button onclick="showKyc()">🔐 KYC</button>
+    <button onclick="showRoadmap()">🗺️ Roadmap</button>
+    <button onclick="showMiningInterface()">🏠 Home</button>
+
+     </div>
+
+
+
+
+
+    <!-- Button to show/hide sidebar -->
+    <div class="menu-button" onclick="toggleSidebar()">&#9776;</div>
+    
+
+
+<div class="sidebar" id="sidebar">
+
+  <button id="sidebar-button">☰</button>
+  <!-- إطار لعرض الصورة -->
+  <div class="image-frame" id="imageFrame">
+    <img src="default-image.jpg" alt="User Image" id="userImage">
+    <input type="file" accept="image/*" id="imageInput" class="image-input">
+  </div>
+
+<div class="sidebar-circle">
+  
+  
+  
+<p style="background-color: white; color: black; font-size: 18px;">UID: <span id="userUID"></span></p>
+
+
+</div>
+
+<a href="#" onclick="showMiningInterface()">Home</a>
+<a href="#" onclick="showEarnings()">Wallet</a>
+<a href="#" onclick="showInviteFriends()">Referral</a>
+<a href="#" onclick="showRoadmap()">Roadmap</a>
+<a href="#" onclick="showKyc()">kyc</a>
+<a id="telegramLink" href="https://www.mediafire.com/file/48gujjtzi7989qv/Xsunapp.apk/file?fbclid=PAAaa7R2SKTE6r3agzZ3IpZRb7B5OPpkxuniHejjCgDe8r9BLxg9r5krl_iMQ">android</a>
+
+
+<button id="signOutButton" style="margin-left: 15px;">Sign Out</button>
+
+  
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+     </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+    <!-- Content -->
+
+
+
+
+    
+    
+
+
+
+  
+  
+
+
+  
+  
+  
+  
+  
+  
+
+
+    <!-- Roadmap container -->
+  <div id="roadMapContainer">
+    
+    
+    <div class="menu-button" onclick="toggleSidebar()">&#9776;</div>
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    
+    
+    
+<div style="text-align: center; background-color: black; padding: 10px;">
+  <h2 style=" color: white; font-size: 6vw;">
+        📋𝑅𝒪𝒜𝒟𝑀𝒜𝒫 🔜    <br>
+
+    🗺️🚀 🌟
+
+
+
+
+  </h2>
+      <hr style="border: none; border-bottom: 0.1vw solid white; margin: 1vw 0; width: 100%;">
+
+</div>
+
+<div style="text-align: center;">
+  <div style="background-color: black; padding: 10px;">
+    <p style="font-size: 4.5vw; color: #dc3545; background-color: ">December 2023</p>
+      
+      <p style="color: #ffffff; font-size: 4vw;"> 🌞Xsun Launching 🎉
+</div>
+
+    <div style="background-color: black; padding: 10px;">
+        <p style="font-size: 4.5vw; color: #dc3545; background-color: black">July 2024</p>
+        <p style="color: #ffffff; font-size: 4vw;">Global Active Users<br>Reach: 0.2M 🔥</p>
+
+    </div>
+
+    <div style="background-color: black; padding: 10px;">
+        <p style="font-size: 4.5vw; color: #dc3545; background-color: black">October 2024</p>
+        <p style="color: #ffffff; font-size: 4vw;">Launching an Intelligent Bot to transform real images into cartoons and directly send them to OpenSea⚡️</p>
+    </div>
+
+    <div style="background-color: black; padding: 10px;">
+        <p style="font-size: 4.5vw; color: #dc3545; background-color: black">December 2024</p>
+        <p style="color: #ffffff; font-size: 4vw;">Launching an Intelligent Telegram Bot, SUN GPT, filled with information and imagination🤖🤖 
+    </div>
+
+    <div style="background-color: black; padding: 10px;">
+        <p style="font-size: 4.5vw; color: #dc3545; background-color: black">February 2025</p>
+        <p style="color: #ffffff; font-size: 4vw;">
+          Add (10,000) Near Liquidity DEX Tools and<br> Open Users Withdraw🎉</p>
+ 
+    </div>
+
+
+
+<div style="background-color: black; padding: 10px;">
+  <p style="font-size: 4.5vw; color: #dc3545; background-color: black;">March 2025</p>
+  <p style="color: white; font-size: 4vw;">My Token Listing on 3 Major Exchanges<br>🔁📉📈</p>
+</div>
+
+    <div style="background-color: black; padding: 10px;">
+        <p style="font-size: 4.5vw; color: #dc3545; background-color: black">April 2025</p>
+        <p style="color: white; background-color: black font-size: 4vw;">Upgrade🔄</p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div id="navButtons" style="position: fixed; bottom: 0; left: 0; background-color: gray; padding: 1px; display: flex; justify-content: space-between; width: 100%;">
+<button onclick="showInviteFriends()">👥 Referral</button>
+  
+<button onclick="showKyc()">🔐 KYC</button>
+  <button onclick="showRoadmap()">🗺️ Roadmap</button>
+  <button onclick="showMiningInterface()">🏠 Home</button>
+</div>
+
+</div>
+
+
+    <!-- زر Home للانتقال إلى الواجهة الرئيسية -->
+<div id="earningsContainer" style="position: relative; top: 0vw; left: 0vw; right: 0vw; bottom: 0; background-color: white; display: none; width: 100vw; height: 35vw;">
+
+
+
+  <div class="menu-button" onclick="toggleSidebar()">&#9776;</div>
+    
+    
+
+
+
+
+
+<span style="font-size: 7vw; color: black; font-family: 'Arial', sans-serif; font-weight: bold; position: absolute; top: 15vw; left: 50%; transform: translateX(-50%); text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); letter-spacing: 2px;">𝒯𝑜𝓉𝒶𝓁 𝐵𝒶𝓁𝒶𝓃𝒸𝑒</span>
+
+    
+
+
+
+
+<div style="position: absolute; text-align: center; top: 0%; right: 3%; transform: translate( -50% , 27vw); z-index: 9999; display: flex; flex-direction: row; justify-content: center;">
+
+
+    <a href="https://www.instagram.com/xsun_team_official?igsh=OGQ5ZDc2ODk2ZA==" style="margin-right: 10px;">
+      <img src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/2048px-Instagram_logo_2016.svg.png?alt=media&token=aecc3bec-9f5b-4235-aae0-d1ca6ee12de8" alt="instagram" width="30" height="30">
+    </a>
+    <a href="https://x.com/team_xsun?s=09">
+      <img src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/new-2023-twitter-logo-x-icon-design_1017-45418.jpg?alt=media&token=08143d22-606f-464b-8a0e-0974c41fb45e" alt="X" width="30" height="30">
+    </a>
+    <div class="custom-button-container" onclick="window.open('whatsapp://message/OGBVOC6HW72YF1', '_blank');" style="cursor: pointer;">
+      <img src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/512px-WhatsApp.svg.png?alt=media&token=05d41c4f-dcfb-4fcf-9ae1-fdf8d4f976ec" alt="whatsapp" width="30" height="30">
+    </div>
+  </div>
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<div style="display: flex; justify-content: center; margin-top: 50; transform: translateY(40vw);">
+  <table>
+    <thead>
+      <tr>
+        <th>Currency</th>
+        <th>Balance</th>
+        <th>Value</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+
+<td>
+  <div style="display: flex; align-items: center;"><img class="currency-icon" src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/immutable-x-imx-glass-crypto-coin-3d-illustration-free-png.png?alt=media&token=5cf5a220-fed2-41b8-a1fe-035e0e3c9a6e" alt="" style="width: 40px; height: 40px; margin-right: 5px;"> XSUN</div>
+</td>
+<td class="balance" id="totalBalance">Total Balance</td>
+
+<td><span id="totalBalanceInUSD"></span></td>
+
+        <td><button onclick="openPopup('Xsun')" style="background-color: blue; color: white; padding: 5px 10px; border: none; border-radius: 5px;">Send</button></td>
+      </tr>
+      <tr>
+        <td><div style="display: flex; align-items: center;"><img class="currency-icon" src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/swiss-flag-round-badge_1308-72045__1_-removebg-preview.png?alt=media&token=b4105cd6-a982-4fd3-9e5c-f7032b9200b2" alt="" style="width: 41px; height: 41px; margin-right: 5px;"> SWZ</div></td>
+        <td class="balance">5000000</td>
+                  <td>$00.00</td>
+        <td><button onclick="openPopup('Swiza')" style="background-color: blue; color: white; padding: 5px 10px; border: none; border-radius: 5px;">Send</button></td>
+      </tr>
+      <tr>
+        <td><div style="display: flex; align-items: center;"><img class="currency-icon" src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D8%A8%D8%AF%D9%88%D9%86%20%D8%B9%D9%86%D9%88%D8%A7%D9%86%20(62).png?alt=media&token=74e2d28f-c0fc-47c2-95da-8032ba71c346" alt="" style="width: 40px; height: 40px; margin-right: 5px;"> SWEAT</div></td>
+        <td class="balance">50.00</td>
+        <td>$00.00</td>
+        <td><button onclick="openPopup('Near')" style="background-color: blue; color: white; padding: 5px 10px; border: none; border-radius: 5px;">Send</button></td>
+      </tr>
+      <tr>
+        <td><div style="display: flex; align-items: center;"><img class="currency-icon" src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/bitcoin-225079_640-removebg-preview.png?alt=media&token=f9de5ffb-aa7f-4a8d-8f4e-a448b79902db.jpg" alt="" style="width: 37px; height: 37px; margin-right: 5px;"> BITCOIN</div></td>
+       <td class="balance" id="btcBalanceAmount">btc Balance</td>
+               <td>$00.00</td>
+        <td><button onclick="openPopup('Bitcoin')" style="background-color: blue; color: white; padding: 5px 10px; border: none; border-radius: 5px;">Send</button></td>
+      </tr>
+      <tr>
+        <td><div style="display: flex; align-items: center;"><img class="currency-icon" src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/near-9828546-7947908.png?alt=media&token=0c6a6e03-4528-4f67-97a6-2f74e2b17543" alt="" style="width: 40px; height: 40px; margin-right: 5px;"> NEAR</div></td>
+        <td class="balance">00.15</td>
+        <td>$00.00</td>
+        <td><button onclick="openPopup('Near')" style="background-color: blue; color: white; padding: 5px 10px; border: none; border-radius: 5px;">Send</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="message" class="message" style="font-weight: bold; color: white; font-size: 1.8em;">Not open yet</div>
+
+
+<div id="popup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #fff; padding: 20px; border: 1px solid #000; border-radius: 10px; z-index: 9999; width: 320px;">
+  <h2 style="margin-bottom: 10px; color: red;">Enter Address and Quantity</h2>
+  <label for="address" style="color: red; margin-bottom: 5px;">Address:</label><br>
+  <input type="text" id="address" name="address" style="margin-bottom: 10px; width: 280px;"><br>
+  <label for="quantity" style="margin-bottom: 5px; color: red;">Quantity:</label><br>
+  <input type="text" id="quantity" name="quantity" style="margin-bottom: 10px; width: 280px;"><br>
+
+  <!-- Select Network -->
+  <label for="network" style="margin-bottom: 5px;">Network:</label><br>
+  <select id="network" style="margin-bottom: 10px; width: 280px;">
+    <option value="Bsc20">Bsc20</option>
+    <option value="Erc20">Erc20</option>
+    <option value="Near">Near</option>
+  </select><br>
+
+  <!-- Swiza Button -->
+  <div id="swizaButton" style="display: none;">
+    <button onclick="sendSwiza()" style="background-color: blue; color: white; padding: 5px 10px; border: none; border-radius: 5px;">Send</button>
+  </div>
+
+  <!-- Xsun Button -->
+  <div id="xsunButton" style="display: none;">
+    <button onclick="sendXsun()" style="background-color: blue; color: white; padding: 5px 10px; border: none; border-radius: 5px; margin-top: 10px;">Send</button>
+  </div>
+
+  <!-- Bitcoin Button -->
+  <div id="bitcoinButton" style="display: none;">
+    <button onclick="sendBitcoin()" style="background-color: blue; color: white; padding: 5px 10px; border: none; border-radius: 5px; margin-top: 10px;">Send</button>
+  </div>
+
+  <!-- Near Button -->
+  <div id="nearButton" style="display: none;">
+    <button onclick="sendNear()" style="background-color: blue; color: white; padding: 5px 10px; border: none; border-radius: 5px; margin-top: 10px;">Send</button>
+  </div>
+
+  <!-- Usdt Button -->
+  <div id="usdtButton" style="display: none;">
+    <button onclick="sendUsdt()" style="background-color: blue; color: white; padding: 5px 10px; border: none; border-radius: 5px; margin-top: 10px;">Send</button>
+  </div>
+
+  <!-- Add buttons for other currencies here -->
+
+  <button onclick="cancel()" style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px; margin-top: 20px;">Cancel</button>
+  <p id="reminder" style="color: red; display: none; margin-top: 10px;">Please enter address and currency name!</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div id="navButtons" style="position: fixed; bottom: 0; left: 0; background-color: white; padding: 1px; display: flex; justify-content: space-between; width: 100%;">
+<button onclick="showInviteFriends()">👥 Referral</button>
+<button onclick="showKyc()">🔐 KYC</button>
+  <button onclick="showRoadmap()">🗺️ Roadmap</button>
+  <button onclick="showMiningInterface()">🏠 Home</button>
+</div>
+
+    
+    
+  
+        
+        
+        
+        
+        
+        <!-- تكرار هذا لإنشاء مربعات إعلانية أخرى -->
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+<div id="kycContainer" style="display: none; position: absolute; top: 20%; max-width: 80vw;">
+  <h2 style="color: white; margin: 0;">KYC Verification</h2>
+  <p id="verificationStatus" style="color: red; margin: 0;"><img src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D8%A8%D8%AF%D9%88%D9%86%20%D8%B9%D9%86%D9%88%D8%A7%D9%86%20(51).png?alt=media&token=ab8e8367-141c-4599-835c-cd43f478561a" alt="Verification Badge" style="width: 10vw; height: 10vw; vertical-align: middle;"> <span style="position: relative; top: 4%;">You are not verified yet.</span></p>
+
+  <form id="kycForm" enctype="multipart/form-data" style="font-size: 2.5vw; margin: 0;">
+    <!-- باقي النصوص والنموذج هنا -->
+
+      <!-- باقي النصوص والنموذج هنا -->
+    <div class="input-container" style="margin: 0; display: flex; flex-direction: column; width: fit-content;">
+      <label for="fullName" style="color: white; margin: 0;">Full Name:</label>
+      <input type="text" id="fullName" name="fullName" required style="margin: 0;">
+    </div>
+    <div class="input-container" style="margin: 0; display: flex; flex-direction: column; width: fit-content;">
+      <label for="nationalID" style="color: white; margin: 0;">National ID:</label>
+      <input type="text" id="nationalID" name="nationalID" required style="margin: 0;">
+    </div>
+    
+<p style="background-color: black; color: antiquewhite; padding: 0px; margin-left: 21%; width: 70vw; position: absolute; top: -18vh; font-size: 4.5vw; height: 15vh; text-align: center; line-height: 1.5;">
+  <span style="display: inline-block; transform: translateY(3%); font-weight: bold; letter-spacing: 1px;">Identity verification<br> is temporarily unavailable<br></span>
+</p>
+
+
+    <div class="menu-button" onclick="toggleSidebar()">&#9776;</div>
+    
+
+
+
+
+    
+    
+    
+    <div class="input-container" style="margin: 0; display: flex; flex-direction: column; width: fit-content;">
+      <label for="idFront" style="color: white; margin: 0;">Front of ID Card:</label>
+      <input type="file" accept="image/*" id="idFront" name="idFront" required style="margin: 0;">
+    </div>
+    <div class="input-container" style="margin: 0; display: flex; flex-direction: column; width: fit-content;">
+      <label for="idBack" style="color: white; margin: 0;">Back of ID Card:</label>
+      <input type="file" accept="image/*" id="idBack" name="idBack" required style="margin: 0;">
+    </div>
+    <label for="selfieButton" style="color: white; margin: 0; display: block;">Take a Selfie:</label>
+    <input type="file" accept="image/*" id="selfieButton" name="selfieButton" capture="user" onclick="openCamera()" required style="margin: 0;">
+<button type="submit" style="margin: 13px; transform: translateY(-0px) translateX(60px); background-color: dodgerblue; color: white;">Submit KYC</button>
+
+
+
+
+
+
+
+
+
+    
+  
+
+
+
+
+
+
+
+
+<div id="navButtons" style="position: fixed; bottom: 0; left: 0; background-color: black; padding: 1px; display: flex; justify-content: space-between; width: 100%;">
+<button onclick="showInviteFriends()">👥 Referral</button>
+<button onclick="showKyc()">🔐 KYC</button>
+  <button onclick="showRoadmap()">🗺️ Roadmap</button>
+  <button onclick="showMiningInterface()">🏠 Home</button>
+
+
+
+
+  
+  
+
+
+
+
+
+
+</div>
+</div>
+
+      
+             
+        
+        
+        
+        
+        
+        
+    </form>
+</div>
+
+<div id="inviteFriendsContainer" style="display: none; height: 130vh;">
+
+
+
+   
+<span style="color: white; font-weight: bold;">Invite friends and earn 0.002 XSun, equivalent to approximately $1 to $2. Copy the referral code and start collecting the rare currency.</span>
+
+
+<p style="position: relative; margin-top: 9%; left: 0; transform: translateY(-50%); font-size: 3.2vw; color: yellowgreen; max-width: 50vw;">YOUR INVITATION CODE :</p>
+
+
+
+
+<div style="position: absolute; top: 10.5%; left: 64%; transform: translateX(-50%); z-index: 999; text-align: center;">
+  <span id="invitationCodeDisplay" style="font-size: 28px; color: red; background-color: white;"></span>
+  
+  <button onclick="copyInvitationCode()" style="margin-top: 10px; padding: 5px 10px; font-size: 16px; cursor: pointer;">Copy</button>
+  <span id="copyMessage" style="font-size: 18px; color: white; display: none; margin-top: 5px;">Copied</span>
+</div>
+
+
+
+
+
+
+
+
+  <div style="display: flex; align-items: center; justify-content: flex-end; border-radius:0; position: relative; top: 5vh;">
+  <div style="width: 10.5vw; height: 10.5vw; display: flex; align-items: center; justify-content: center; border-radius: 50%; background-image: url('https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D8%A8%D8%AF%D9%88%D9%86%20%D8%B9%D9%86%D9%88%D8%A7%D9%86%20(52).png?alt=media&token=a585acb8-b02e-40d2-8bf4-965275599e98'); background-size: cover; background-position: center; margin-right: 1vw;"></div>
+  <span id="referralBalanceUSD" style="margin-right: 1vw; font-size: 10vw; color: white;">0.00000000000</span>
+</div>
+
+
+
+
+
+
+  <div style="display: flex; align-items: center; justify-content: flex-end; border-radius:0; position: relative; top: 10vh;">
+  <div style="width: 10.5vw; height: 10.5vw; display: flex; align-items: center; justify-content: center; border-radius: 50%; background-image: url('https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/internxt.png?alt=media&token=174fec9c-6370-40ae-b094-449'); background-size: cover; background-position: center; margin-right: 1vw;"></div>
+  <span id="referralBalance" style="margin-right: 1vw; font-size: 10vw; color: white;">0.00000000000</span>
+      
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <ul id="referralList" style="background-color: white;">
+    <!-- سيتم إضافة الأكواد والمكافآت هنا -->
+</ul>
+
+
+
+
+
+
+
+
+<p style="font-size: 4vw; margin-top: 92%; margin-left: 5%; position: absolute; top: 0; left: 0;">your team <span id="referralHistory">0</span></p>
+
+        <!-- نموذج لإدخال رمز الدعوة -->
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="navButtons" style="position: fixed; bottom: 0; left: 0; background-color: black; padding: 1px; display: flex; justify-content: space-between; width: 100%;">
+  <button onclick="showInviteFriends()">👥 Referral</button>
+<button onclick="showKyc()">🔐 KYC</button>
+  <button onclick="showRoadmap()">🗺️ Roadmap</button>
+  <button onclick="showMiningInterface()">🏠 Home</button>
+</div>
+
+</div>
+
+
+
+   
+   
+   
+   
+   
+   
+   
+    
+      </head>
+<body>
+    
+
+
+    <style>
+        /* أسلوب الصفحة */
+        body {
+            font-family: Arial, sans-serif;
+            /* اجعل الصورة خلفية للجسم وقم بتكرارها */
+            background: url('/Kkkkk6bd4cxzsdc.png') no-repeat center center fixed;
+            /* ضبط حجم الصورة بنسبة 100% من حجمها الأصلي */
+            background-size: 100% 100%;
+            color: white;
+            /* تغيير لون النص إلى الأسود */
+            margin: 0;
+        }
+
+
+    {text-align: center; background-color: lightseagreen; color: white;}
+
+        /* العناصر النصية مع تنسيق B */
+        p, button, input, strong {
+            background-color: #111;
+            color: white;
+            border: 2px solid #4CAF50;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 5px;
+            font-weight: bold; /* تطبيق تنسيق الحروف B */
+        }
+        /* زر بداية التعدين */
+        #startMiningButton {
+            background-color: #4CAF50;
+            cursor: pointer;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /* إضافة هامش للعناصر */
+        p, button, input, strong {
+            margin-bottom: 10px;
+        }
+
+        /* إضافة تباعد بين العناصر */
+        .input-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+
+        #loginButton, #logoutButton {
+            display: none;
+        }
+
+        .loggedIn #logoutButton {
+            display: block;
+        }
+
+        .loggedIn #loginContainer {
+            display: none;
+        }
+
+
+
+
+        /* Button to show/hide the sidebar */
+        .menu-button {
+            position: fixed;
+            left: 0;
+            top: 20px;
+            background-color: black;
+            padding: 10px 15px;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            z-index: 2;
+            transition: 0.3s;
+        }
+
+
+#roadMapContainer {
+  display: none;
+  height: 175vh; /* تحديد الارتفاع لحجم الشاشة بالكامل */
+  
+}
+
+
+
+        /* تنسيق رسائل "Not open yet" */
+        .tooltip {
+            position: absolute;
+            background-color: #333;
+            color: white;
+            font-size: 12px;
+            padding: 5px;
+            border-radius: 3px;
+            display: none;
+            left: 100%; /* تحديد المسافة بين الرسالة والكلمة */
+            top: 0;
+        }
+
+        .sidebar a:hover .tooltip {
+            display: inline-block; /* عند تحويل المؤشر إلى الكلمة */
+        }
+
+        #withdrawButton[disabled] {
+            background-color: #777;
+            cursor: not-allowed;
+        }
+
+        #withdrawButton.disabled {
+            background-color: #777;
+            cursor: not-allowed;
+        }
+
+        /* Earnings grid layout */
+        
+
+{
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+container {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+}
+
+
+.hidden {
+  display: none;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.center-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#miningContainer {
+  display: none;
+}
+  
+  
+ 
+
+
+ .
+
+ 
+ 
+  
+
+        
+    </style>
+</head>
+<body>
+
+
+
+
+
+
+    
+    
+    
+<style> 
+    
+body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background-color: black;
+          color: #ecf0f1;
+          margin: 0;
+        }
+        
+        
+        
+        
+        
+  @media screen and (max-width: 767px) {
+    /* قم بتعديل القواعد الخاصة بالشاشات الصغيرة هنا */
+  }
+  
+  /* قواعد CSS للشاشات المتوسطة (الأجهزة اللوحية) */
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* قم بتعديل القواعد الخاصة بالشاشات المتوسطة هنا */
+  }
+  
+  /* قواعد CSS للشاشات الكبيرة (الحواسيب) */
+  @media screen and (min-width: 1025px) {
+    /* قم بتعديل القواعد الخاصة بالشاشات الكبيرة هنا */
+  }      
+        
+        
+        
+        
+        
+        /* تحديد لون الحدود للعناصر p، button، input، و strong إلى اللون الأبيض */
+p, button, input, strong {
+  border: 1px solid black;
+}
+        
+
+
+
+        /* زر بداية التعدين */
+#startMiningButton {
+    position: absolute;
+    top: 370px; /* قم بتعديل هذه القيمة حسب احتياجاتك */
+    left: 50%; /* لوضع الزر في منتصف العرض */
+    transform: translateX(-50%); /* لتوسيع الزر ليكون في منتصف العرض بناءً على حجمه */
+}
+
+#startMiningButton:hover {
+  background-color: #2980b9;
+}
+
+      
+      
+      
+
+table {
+    background-color: black; /* تغيير لون خلفية الجدول إلى الأسود */
+    color: whitesmoke; /* تغيير لون النص إلى الأبيض */
+    width: 95%;
+    border-collapse: ;
+     /* زيادة ارتفاع الجدول إلى 90% من ارتفاع الشاشة */
+
+
+}
+
+
+th, td {
+    padding: 0:px;
+    text-align: left;
+    border-bottom: 10vw solid black;
+}
+th {
+    background-color: black;
+    
+}
+.currency-icon {
+  font-size: 10px;
+  margin-right: 5px;
+  color: black;
+          
+            
+  /* تغيير لون الأيقونات إلى الأسود */
+}
+.balance {
+    font-weight: bold;
+}
+      
+      
+.message {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: red;
+  color: wheat;
+  padding: 10px;
+  font-size: 18px;
+  display: none;
+}    
+      
+      
+        /* إضافة هامش للعناصر */
+        p, button, input, strong {
+            margin-bottom: 10px;
+        }
+
+        /* إضافة تباعد بين العناصر */
+        .input-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* أزرار تسجيل الدخول والخروج */
+        #loginButton, #logoutButton {
+            display: none;
+        }
+
+        .loggedIn #logoutButton {
+            display: block;
+        }
+
+        .loggedIn #loginContainer {
+            display: none;
+        }
+
+ 
+
+ 
+
+        /* Sidebar menu styles */
+    /* Sidebar menu styles */
+        .sidebar {
+            position: fixed;
+            right: -250px;
+            /* Start hidden off-screen */
+            top: 0;
+            width: 240px;
+            height: 100%;
+            background-color: black;
+            overflow-x: hidden;
+            padding-top: 20px;
+            transition: 0.3s; /* Smooth transition effect */
+        }
+
+        /* Button to show/hide the sidebar */
+/* تنسيق الكلمات داخل الشريط الجانبي */
+           .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 30px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+            position: relative; 
+            
+             
+           }
+
+
+        .sidebar a:hover {
+            background-color: black;
+        }
+        /* Roadmap container */
+     #roadMapContainer {
+       display: none;
+    
+     }
+
+
+
+
+
+
+      
+        /* تنسيق رسائل "Not open yet" */
+        .tooltip {
+            position: absolute;
+            background-color: #333;
+            color: white;
+            font-size: 12px;
+            padding: 5px;
+            border-radius: 3px;
+            display: none;
+            left: 100%; /* تحديد المسافة بين الرسالة والكلمة */
+            top: 0;
+        }
+
+        .sidebar a:hover .tooltip {
+            display: inline-block; /* عند تحويل المؤشر إلى الكلمة */
+        }
+
+
+
+
+        /* Earnings grid layout */
+
+/* تنسيق إطار الصورة */
+/* تنسيق إطار الصورة */
+/* تنسيق إطار الصورة */
+./* تنسيق إطار الصورة */
+.image-frame-container {
+  position: relative;
+}
+
+.image-frame {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px; /* تقليل حجم الإطار */
+  height: 80px; /* تقليل حجم الإطار */
+  overflow: hidden;
+  border-radius: 50%; /* لجعلها دائرية */
+  background-color: #ccc; /* لتوضيح المكان إذا لم تكن هناك صورة */
+}
+
+/* تنسيق مربع Uid */
+#userImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* تنسيق زر تحميل الصورة */
+.image-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* تحديد موقع العنوان Xs Xsun Token وتنسيقه */
+
+
+
+
+
+        
+
+
+
+
+/* إضافة ستايل لمربع الرسالة */
+#notificationBox {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border: 1px solid black;
+  display: none;
+  margin-left: 10px;
+  /* تعيين المسافة بين الزر ومربع الرسالة هنا */
+}
+
+p {
+  background-color: black; /* لون الخلفية السوداء */
+  color: white; /* لون النص */
+  padding: 10px; /* تباعد النص عن الحواف الداخلية */
+  border-radius: 10px; /* التنويع في حواف المربع */
+}
+
+
+/* Apply styles only to the Roadmap section */
+
+
+
+
+
+
+#roadMapContainer .blue-text {
+  color: blue;
+}
+
+
+
+
+
+
+#roadMapContainer .blue-text {
+  color: white;
+}
+
+
+
+  
+  .center-aligned {
+    text-align: center;
+  }
+  
+  
+
+  
+  .green-text {
+    color: white;
+  }
+  
+  
+  .red-text {
+    color: white;
+  }
+
+  #notificationBox {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border: 1px solid black;
+    display: none;
+    margin-left: 10px;
+    /* تعيين المسافة بين الزر ومربع الرسالة هنا */
+  }
+  
+
+
+
+
+
+.custom-button-container {
+        width: 0px; /* يمكنك تعديل العرض حسب احتياجاتك */
+        height: 50px; /* يمكنك تعديل الارتفاع حسب احتياجاتك */
+        margin-bottom: 20px;
+    }
+
+
+#secretContent {
+  position: relative;
+  min-height: 93vh;
+  background-color: inherit;
+}
+
+
+#bottomQuarter {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 25%;
+        background-color: white;
+        z-index: 9999; /* تأكد من أن الزر الأسفل يظهر فوق هذا الخلفية */
+    }
+
+
+
+
+  .custom-button {
+    width: 100%;
+    height: 400%;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  
+  /* شريط جانبي */
+  #sidebar {
+    z-index: 10000;
+    /* تأكد من زيادة هذه القيمة */
+  }
+  
+  /* نص */
+  div {
+    z-index: 9999;
+    /* باقي الأنماط الأخرى للنص */
+  }
+  
+  
+  #messageContainer {
+    margin-top: 10px;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+
+  .image-container {
+    text-align: center; /* يضمن وسط الصورة داخل العنصر الذي يحتوي عليها */
+}
+
+.image-container img {
+    max-width: 100%; /* يجعل الصورة تأخذ حجمًا أقل أو يساوي عرض العنصر الذي يحتوي عليها */
+    height: auto; /* يضمن الحفاظ على نسب العرض إلى الارتفاع */
+}
+
+
+
+
+
+
+.red-text {
+  color: black;
+  padding: 10px; /* تعيين البادينغ بالحجم المطلوب */
+  background-color: white; /* تحديد لون البادينغ */
+}
+
+
+.white-padding {
+  padding: 10px; /* تعيين البادينغ بالحجم المطلوب */
+  background-color: white; /* تحديد لون البادينغ */
+    color: black;
+}
+
+
+.same-style {
+  padding: 10px; /* تعيين البادينغ بالحجم المطلوب */
+  background-color: white; /* تحديد لون البادينغ */
+  color: black;
+}
+
+
+
+
+
+
+
+
+
+  
+#registrationContainer {
+    width: 80%;
+
+    margin: 0 auto;
+    max-width: 600px;
+    
+  
+
+  
+   margin-top: 80px;
+   
+}
+  
+  #loginContainer {
+    width: 70%;
+
+    margin: 0 auto;
+    max-width: 600px;
+    
+    
+    display: none;
+  
+   margin-top: 270px;
+   
+
+}
+  
+  
+
+    
+  
+  
+  
+.bottom-center-text {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px; /* حجم الخط حسب الحاجة */
+}
+  
+  
+
+.bottom-center-text {
+    font-size: 29px; /* حدد حجم الخط حسب الحاجة */
+    margin-top: 30px; /* تحريك النص للأعلى بقيمة معينة */
+    color: skyblue; /* تحديد لون النص بالبرتقال */
+}
+
+
+
+/* تحديد موقع النص الأفقي */
+h1 {
+    color: white;
+    font-size: 30px;
+    margin: 0;
+    text-align: right; /* تحديد موقع النص إلى اليمين */
+    font-weight: bold; /* تحديد تنسيق B */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* إضافة ظل لزيادة التباين */
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 10px;
+  margin-top: 50px;
+}
+
+.input-container label {
+  color: white;
+  font-size: 1.5em;
+  display: block; /* تجعل النص يظهر كبلوك للحصول على فصل بين النص والحقل */
+  margin-bottom: 5px; /* تضيف بعض المسافة بين النص وحقل الإدخال */
+}
+
+#enterWalletAddress {
+  width: 150px; /* تحديد عرض الحقل حسب الحاجة */
+  padding: 8px;
+  font-size: 14px; /* تحديد حجم النص في الحقل */
+  margin-top: 10px; /* تنزيل المربع دون التأثير على النصوص الأخرى */
+}
+
+
+/* تصميم مربع المبلغ */
+#withdrawAmount {
+  width: 200px; /* تحديد عرض الحقل حسب الحاجة */
+  padding: 8px;
+  font-size: 14px; /* تحديد حجم النص في الحقل */
+  margin-top: 10px; /* تنزيل المربع دون التأثير على النصوص الأخرى */
+}
+
+
+
+
+
+  
+  
+
+  
+  .balance-container {
+  display: flex; /* جعل العناصر داخل المربع تتمدد أفقيًا */
+  align-items: center; /* توسيط العناصر عموديًا */
+
+  font-size: 20px;
+}
+
+.circle-image {
+  width: 28px; /* تعديل حجم الصورة */
+  height: 32px;
+  border-radius: 50%; /* جعل العنصر دائريًا */
+  overflow: hidden; /* إخفاء أي جزء من الصورة الخارج عن الشكل الدائري */
+  margin-left: 10px; /* تباعد بين النص والصورة */
+  background: white;
+  vertical-align: middle;
+}
+
+
+* {
+    z-index: 1; /* تحديد قيمة z-index لجميع العناصر */
+}
+
+#confirmationDialog {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  z-index: 9999;
+  /* زيادة القيمة لجعله يظهر فوق العناصر الأخرى */
+}
+  
+#signOutButton {
+    font-size: 20px;
+    background-color: red; /* تعيين لون الخلفية إلى الأحمر */
+    color: white; /* تعيين لون النص إلى الأبيض */
+}
+
+
+
+  
+  
+
+  
+   </style>
+   
+   
+   
+   
+   
+   
+   
+   
+</head>
+<body>
+  
+
+
+
+    
+
+    <script type="module">
+        
+        
+        
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js';
+import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js';
+
+        
+        
+        import {
+            getAuth,
+            createUserWithEmailAndPassword,
+            signInWithEmailAndPassword,
+            onAuthStateChanged,
+            signOut
+        } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
+        
+        import { sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
+
+       
+        import {
+            getFirestore,
+            doc,
+            setDoc,
+            getDoc,
+            updateDoc,
+            deleteDoc
+        } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
+
+  
+        import { getDatabase, ref, child, set } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
+
+    import { collection, query, where, getDocs } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
+    
+
+
+    
+        const firebaseConfig = {
+            apiKey: "AIzaSyCtPB6FBM0-xr3VdpcZOypdtPNWSrdRqFo",
+            authDomain: "xsun-b171d.firebaseapp.com",
+            projectId: "xsun-b171d",
+            storageBucket: "xsun-b171d.appspot.com",
+            messagingSenderId: "225050078666",
+            appId: "1:225050078666:web:ab797e8fff75f151697333",
+            measurementId: "G-PNNR5KG1V6"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+        const userEmail = document.querySelector("#userEmail");
+        const userPassword = document.querySelector("#userPassword");
+        const authForm = document.querySelector("#authForm");
+        const secretContent = document.querySelector("#secretContent");
+        const signUpButton = document.querySelector("#signUpButton");
+        const signInButton = document.querySelector("#signInButton");
+        const signOutButton = document.querySelector("#signOutButton");
+        const countdownElement = document.querySelector("#countdown");
+        const balanceElement = document.querySelector("#balance");
+        const balanceInUSD = document.querySelector("#balanceInUSD");
+        const invitationCode = document.querySelector("#invitationCode");
+        const startMiningButton = document.querySelector("#startMiningButton");
+        const inviteFriendsContainer = document.querySelector("#inviteFriendsContainer");
+        
+        const invitationCodeInput = document.querySelector("#invitationCodeInput");
+        
+        
+
+   const analytics = getAnalytics(app);
+
+        
+        
+        let startTime = 0;
+        const xsunToUSD = 500.00;
+
+        const MINING_TIME_KEY = "miningTime";
+        const BALANCE_KEY = "balance";
+        const START_TIME_KEY = "startTime";
+
+        secretContent.style.display = 'none';
+
+        const generateInvitationCode = () => {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let code = '';
+            for (let i = 0; i < 8; i++) {
+                code += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            return code;
+        }
+
+        const isValidGmail = (email) => {
+            const gmailRegex = /^[a-zA-Z0-9._-]+@gmail.com$/;
+            return gmailRegex.test(email);
+        }
+
+        
+        
+        
+const displayBalanceAndCountdown = () => {
+  displayCountdown();
+  displayBalance();
+}
+
+        
+let miningTime = 43200; // 12 hours in seconds
+let interval; // Define interval variable globally
+let isMining = false;
+
+        
+        let miningStartTime = 0; // تاريخ ووقت بدء التعدين
+
+
+        const startMining = () => {
+  if (!isMining) {
+    isMining = true;
+    loadMiningData();
+    updateMiningData();
+    setInterval(() => {
+      updateMiningData();
+
+    }, 1000);
+    saveMiningTimeOnExit();
+  } else {
+    showMessage("Mining is already in progress.");
+  }
+}
+
+
+const displayCountdown = () => {
+  if (miningTime > 0) {
+    const days = Math.floor(miningTime / ( 0 * 24));
+    const hours = Math.floor((miningTime % ( 3600 * 24)) / 3600);
+    const minutes = Math.floor((miningTime % 3600) / 60);
+    const seconds = Math.max(Math.floor(miningTime % 60), 0);
+    countdownElement.textContent = `${pad(days)}:${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+  }
+}
+
+
+
+
+
+// تحديث الرصيد كل 5 ثوانٍ
+setInterval(() => {
+    displayBalance();
+}, 5000); // 5000 مللي ثانية تعني 5 ثوانٍ
+
+function displayBalance() {
+    const balanceIncreaseRate = 0.0;
+    const currentBalance = parseFloat(balanceElement.textContent);
+    const newBalance = currentBalance + balanceIncreaseRate;
+    balanceElement.textContent = newBalance.toFixed(10);
+    updateBalanceInUSD();
+}
+
+function updateBalanceInUSD() {
+    const currentBalance = parseFloat(balanceElement.textContent);
+    const balanceUSD = currentBalance * xsunToUSD;
+    balanceInUSD.textContent = `Balance in USD: $${balanceUSD.toFixed(2)}`;
+
+    const totalBalanceElement = document.getElementById("totalBalance");
+    const totalBalanceUSD = parseFloat(totalBalanceElement.textContent) * xsunToUSD;
+
+    totalBalanceInUSD.textContent = ` $${totalBalanceUSD.toFixed(2)}`;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const updateBalanceInDatabase = async (newBalance) => {
+    const user = auth.currentUser;
+    if (user) {
+        try {
+            await updateDoc(doc(db, "Users", user.email), {
+                balance: newBalance
+            });
+        } catch (error) {
+            console.error(":", error);
+        }
+    }
+}
+
+
+
+
+        const updateMiningData = () => {
+            const currentTime = Date.now();
+            const elapsedTime = (currentTime - startTime) / 1000;
+            if (miningTime > 0) {
+                miningTime -= elapsedTime;
+                if (miningTime < 0) miningTime = 0;
+
+                displayBalance();
+                saveMiningData();
+            }
+            startTime = currentTime;
+        }
+
+        const pad = (num) => {
+            return num.toString().padStart(2, '0');
+        }
+
+
+        
+        
+
+
+
+        const saveMiningData = () => {
+            const user = auth.currentUser;
+            if (user) {
+                updateDoc(doc(db, "Users", user.email), {
+                    miningTime: miningTime,
+                    balance: parseFloat(balanceElement.textContent),
+                    startTime: startTime
+                });
+            }
+        }
+
+const loadMiningData = async () => {
+            const user = auth.currentUser;
+            if (user) {
+                const userDoc = await getDoc(doc(db, "Users", user.email));
+                if (userDoc.exists()) {
+                    const userData = userDoc.data();
+                    miningTime = userData.miningTime;
+                    balanceElement.textContent = userData.balance.toFixed(10);
+                    startTime = userData.startTime || Date.now();
+                }
+            }
+        }
+
+
+        const checkAuthState = () => {
+          onAuthStateChanged(auth, user => {
+            if (user) {
+              authForm.style.display = 'none';
+              secretContent.style.display = 'block';
+              loadUserData(user.email);
+            } else {
+              authForm.style.display = 'block';
+              secretContent.style.display = 'none';
+            }
+          })
+        }
+        
+        
+       const loadUserData = async (email) => {
+    const userDoc = await getDoc(doc(db, "Users", email));
+    if (userDoc.exists()) {
+        const userData = userDoc.data();
+        miningTime = userData.miningTime;
+        balanceElement.textContent = userData.balance.toFixed(10);
+        
+        // استرجاع رصيد الإحالة
+        const referralBalance = userData.referralBalance || 0;
+        
+        // حساب إجمالي الرصيد
+        const totalBalance = parseFloat(userData.balance) + parseFloat(referralBalance);
+        
+        // عرض إجمالي الرصيد في العنصر Total balance
+        const totalBalanceElement = document.getElementById('totalBalance');
+        if (totalBalanceElement) {
+            totalBalanceElement.textContent = totalBalance.toFixed(10);
+        }
+        
+        // متابعة باقي العمليات...
+    
+    
+const userUIDDisplay = document.querySelector("#userUID");
+userUIDDisplay.textContent = userData.uid || ""; // تحديث معرف المستخدم
+
+
+
+// Display user image
+const userImage = document.querySelector("#userImage");
+if (userData.userImage) {
+  userImage.src = userData.userImage;
+} else {
+  // If no image is available, display default image
+  userImage.src = "default-image.jpg";
+}
+
+
+        const invitationCodeValue = userData.invitationCode;
+        if (invitationCodeValue) {
+          const invitationCodeDisplay = document.querySelector("#invitationCodeDisplay");
+          invitationCodeDisplay.textContent = invitationCodeValue; // تحديث قيمة رمز الدعوة
+        }
+        
+        // عرض قيمة "Referral Balance"
+        // عرض قيمة "Referral Balance"
+// عرض قيمة "Referral Balance"
+// في نهاية الدالة loadUserData بعد تحميل بيانات المستخدم
+// في نهاية الدالة loadUserData بعد تحميل بيانات المستخدم
+const referralBalanceDisplay = document.querySelector("#referralBalance");
+const formattedBalance = userData.referralBalance ? userData.referralBalance.toFixed(4) : "0.0000";
+referralBalanceDisplay.textContent = formattedBalance;
+
+        // عرض قيمة "Referral Balance"
+        
+        referralBalanceDisplay.textContent
+        
+        // تحديث قيمة "Referral Balance" بالدولار
+        updateReferralBalanceInUSD()
+
+
+
+const referralHistoryDisplay = document.querySelector("#referralHistory");
+if (userData.referralHistory && userData.referralHistory.length > 0) {
+    const displayedEmails = new Map(); // استخدام Map لتتبع البريد الإلكتروني المعروض بالفعل
+    
+    let htmlContent = "(" + userData.referralHistory.length + ") <br>";
+
+    for (const email of userData.referralHistory) {
+        // تحقق مما إذا كان البريد الإلكتروني قد تم عرضه بالفعل أم لا باستخدام البريد نفسه كمفتاح
+        if (!displayedEmails.has(email)) {
+            displayedEmails.set(email, true); // إضافة البريد الإلكتروني للكائن Map للإشارة إلى أنه تم عرضه
+            // ... (بقية الشيفرة)
+            const userDoc = await getDoc(doc(db, "Users", email));
+            if (userDoc.exists()) {
+                const userData = userDoc.data();
+                const userImage = userData.userImage ? userData.userImage : null; // لا صورة متاحة
+                const hiddenEmail = email.substring(0, 3) + "***" + email.substring(email.indexOf("@"));
+                if (userImage) {
+                    htmlContent += `<div style="display: flex; align-items: center; background-color: white;"><img src="${userImage}" alt="User Image" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; margin-right: 10px;"><span style="color: black;">${hiddenEmail}</span></div><br>`;
+                } else {
+                    htmlContent += `<div style="display: flex; align-items: center; background-color: white;"><div style="width: 50px; height: 50px; border-radius: 50%; background-color: #ccc; margin-right: 10px;"></div><span style="color: black;">${hiddenEmail}</span></div><br>`;
+                }
+            }
+        }
+    }
+    referralHistoryDisplay.innerHTML = htmlContent;
+} else {
+    referralHistoryDisplay.textContent = "Referral TEAM";
+}
+
+
+
+
+
+const btcBalanceAmountElements = document.querySelectorAll("#btcBalanceAmount");
+btcBalanceAmountElements.forEach(element => {
+  element.textContent = parseFloat(userData.btcBalance).toFixed(10);
+});
+
+
+        
+        if (userData.balance === 0) {
+            updateDoc(doc(db, "Users", email), {
+                balance: 0.05
+            });
+        }
+    }
+}
+
+
+
+
+
+
+const generateUID = () => {
+    const characters = '0123456789';
+    let uid = '';
+    for (let i = 0; i < 8; i++) {
+        uid += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    return uid;
+};
+       
+       
+       
+ const referralBalanceDisplayUSD = document.querySelector("#referralBalanceUSD");
+
+const referralBalanceDisplay = document.querySelector("#referralBalance");
+      
+       
+
+
+
+
+
+
+let agreeChecked = false;
+
+// خطوة 2: إضافة دالة للتحقق من موافقة المستخدم على الشروط
+const checkAgreement = () => {
+  agreeChecked = document.getElementById("agreeCheckbox").checked;
+  if (!agreeChecked) {
+    showMessage("Please agree to the terms and conditions before signing up.");
+  }
+  return agreeChecked;
+};
+
+
+const MAX_ACCOUNTS_PER_DEVICE = 3;
+
+const generateDeviceID = () => {
+  // Generate a random string of characters to use as the device ID
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  let deviceID = '';
+  for (let i = 0; i < 10; i++) {
+    deviceID += characters.charAt(Math.floor(Math.random() * characters.length));
+  }
+  return deviceID;
+};
+
+const checkDeviceID = () => {
+  const deviceID = localStorage.getItem('deviceID');
+  return deviceID;
+};
+
+const setDeviceID = (deviceID) => {
+  localStorage.setItem('deviceID', deviceID);
+};
+
+
+const incrementAccountCount = () => {
+  let accountCount = localStorage.getItem('accountCount');
+  if (!accountCount) {
+    accountCount = 0;
+  }
+  accountCount++;
+  localStorage.setItem('accountCount', accountCount);
+};
+
+const userSignUp = async () => {
+  const signUpEmail = userEmail.value;
+  const signUpPassword = userPassword.value;
+
+  if (!isValidGmail(signUpEmail)) {
+    showMessage("Enter a valid Gmail address");
+    return;
+  }
+
+  if (!/^(?=.*[A-Za-z])(?=.*\d).{6,}$/.test(signUpPassword)) {
+    showMessage("Password must contain both letters and numbers and be at least 6 characters long");
+    return;
+  }
+
+  const deviceID = checkDeviceID();
+  if (!deviceID) {
+    setDeviceID(deviceID);
+  }
+  
+  let accountCount = localStorage.getItem('accountCount');
+  if (!accountCount) {
+    accountCount = 0;
+  }
+  
+  if (accountCount >= MAX_ACCOUNTS_PER_DEVICE) {
+    showMessage("You have reached the maximum limit of accounts on this device");
+    return;
+  }
+  if (!checkAgreement()) {
+    return;
+  }
+  try {
+    // Generate a new invitation code for the user
+    const newInvitationCode = generateInvitationCode();
+
+    // Generate a new UID for the user
+    const newUID = generateUID();
+
+    // Check if the new invitation code is already in use
+    const referredEmail = await getReferredEmail(invitationCode.value.trim());
+    if (referredEmail) {
+      const userCredential = await createUserWithEmailAndPassword(auth, signUpEmail, signUpPassword);
+      // Save the new invitation code, UID, and user data to the database
+      await setDoc(doc(db, "Users", signUpEmail), {
+        miningTime: 43200,
+        balance: 0.05,
+        btcBalance: 0.000000001, // Initial Bitcoin balance
+        email: signUpEmail,
+        invitationCode: newInvitationCode,
+        referralBalance: 0, // Initialize referral balance to 0
+        referralHistory: [], // Initialize referral history to an empty array
+        uid: newUID, // Add the UID to the saved user data
+        password: signUpPassword // Save the password to the database
+      }, { merge: true });
+
+      showMessage("Your account has been created successfully!");
+      incrementAccountCount();
+
+      // Update referral balance for the referring user
+      await updateReferralBalance(referredEmail);
+
+      // Update referral history for the referring user
+      await updateReferralHistory(referredEmail, signUpEmail);
+
+      // Update invitation code display only for the newly created account
+      const invitationCodeDisplay = document.querySelector("#invitationCodeDisplay");
+      invitationCodeDisplay.value = "Invitation Code: " + newInvitationCode;
+
+      // Add 0.000000001 BTC to the user's BTC balance in the database
+      const btcToAdd = 0.0000000012;
+      updateBalance(btcToAdd);
+      updateBtcBalanceInFirestore(btcToAdd);
+    } else {
+      showMessage("Invalid invitation code.");
+      return;
+    }
+  } catch (error) {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    showMessage("Error: " + errorCode + " " + errorMessage);
+  }
+};
+
+
+const updateReferralBalance = async (referringUserEmail) => {
+    try {
+        // Get the current referral balance
+        const referringUserReferralBalance = await getReferralBalance(referringUserEmail);
+        
+        // Calculate the new referral balance by adding 0.002 to the current balance
+        const newReferralBalance = referringUserReferralBalance + 0.002;
+        
+        // Update the referral balance in the database
+        await updateDoc(doc(db, "Users", referringUserEmail), {
+            referralBalance: newReferralBalance
+        });
+
+        // Update the referral balance display on the user interface
+        const referralBalanceDisplay = document.querySelector("#referralBalance");
+        referralBalanceDisplay.textContent = newReferralBalance;
+    } catch (error) {
+        showMessage("Error updating referral balance: " + error.message);
+    }
+};
+
+const updateReferralHistory = async (referringUserEmail, referredUserEmail) => {
+    try {
+        // Get the current referral history
+        const referringUserReferralHistory = await getReferralHistory(referringUserEmail);
+
+        // Add the new referred user email to the referral history
+        referringUserReferralHistory.push(referredUserEmail);
+
+        // Update the referral history in the database
+        await updateDoc(doc(db, "Users", referringUserEmail), {
+            referralHistory: referringUserReferralHistory
+        });
+
+        // Update the referral history display on the user interface
+        const referralHistoryDisplay = document.querySelector("#referralHistory");
+        referralHistoryDisplay.textContent = referringUserReferralHistory.length;
+    } catch (error) {
+        showMessage("Error updating referral history: " + error.message);
+    }
+};
+
+const getReferralBalance = async (email) => {
+    const userDoc = await getDoc(doc(db, "Users", email));
+    if (userDoc.exists()) {
+        return userDoc.data().referralBalance;
+    } else {
+        return 0;
+    }
+};
+
+const getReferralHistory = async (email) => {
+    const userDoc = await getDoc(doc(db, "Users", email));
+    if (userDoc.exists()) {
+        return userDoc.data().referralHistory;
+    } else {
+        return [];
+    }
+};
+
+
+
+
+
+
+        const userSignIn = async () => {
+  const signInEmail = userEmail.value;
+  const signInPassword = userPassword.value;
+
+  if (!isValidGmail(signInEmail)) {
+    showMessage("Enter a valid Gmail address");
+    return;
+  }
+
+  signInWithEmailAndPassword(auth, signInEmail, signInPassword)
+    .then(() => {
+      showMessage("You have signed in successfully!");
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      if (errorCode === "auth/wrong-password" || errorCode === "auth/invalid-login-credentials") {
+        showMessage("Error password");
+      } else if (errorCode === "auth/user-not-found") {
+        showMessage("Email does not exist");
+      } else if (errorCode === "auth/too-many-requests") {
+        showMessage("Access temporarily disabled due to many failed login attempts. You can immediately restore it by resetting your password or you can try again later.");
+      } else {
+        showMessage("Error: " + errorMessage);
+      }
+    });
+};
+
+
+const userSignOut = async () => {
+    await signOut(auth);
+}
+
+const confirmationDialog = document.querySelector("#confirmationDialog");
+
+signOutButton.addEventListener('click', () => {
+    confirmationDialog.style.display = 'block';
+});
+
+const confirmLogout = async () => {
+    document.getElementById("confirmationDialog").style.display = "none"; // إخفاء مربع الرسالة
+    await userSignOut(); // تسجيل الخروج عند الضغط على نعم
+    location.reload(); // تحديث الصفحة بعد الخروج
+}
+
+const cancelLogout = () => {
+    document.getElementById("confirmationDialog").style.display = "none"; // إخفاء مربع الرسالة
+}
+
+document.getElementById("yesButton").addEventListener("click", confirmLogout);
+document.getElementById("noButton").addEventListener("click", cancelLogout);
+
+     // أضف مستمع حدث orientationchange
+// أضف مستمع حدث orientationchange
+// استمع للنقر على النافذة
+// استمع للنقر على النافذة
+
+
+// إضافة المستمعين للأزرار نعم ولا
+
+const showMessage = (message) => {
+  const messageElement = document.createElement("div");
+  messageElement.textContent = message;
+  messageElement.style.position = "fixed";
+  messageElement.style.top = "70%";
+  messageElement.style.left = "50%";
+  messageElement.style.transform = "translate(-50%, -50%)";
+  messageElement.style.backgroundColor = "white";
+  messageElement.style.color = "black";
+  messageElement.style.textAlign = "center";
+  messageElement.style.padding = "15px";
+  messageElement.style.borderRadius = "10px";
+  messageElement.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
+  messageElement.style.zIndex = "9999"; // ضمان ظهور الرسالة فوق الجميع
+  document.body.appendChild(messageElement);
+
+  setTimeout(() => {
+    document.body.removeChild(messageElement);
+  }, 3000);
+};
+
+
+
+
+
+
+
+
+
+
+        const fillMax = () => {
+            // Logic to fill maximum amount
+        }
+
+        const withdrawAmount = () => {
+            // Logic to withdraw amount
+        }
+
+        const enableEditing = () => {
+            // Logic to enable editing
+        }
+
+        checkAuthState();
+
+        signUpButton.addEventListener('click', userSignUp);
+        signInButton.addEventListener('click', userSignIn);
+        
+        startMiningButton.addEventListener('click', startMining);
+        
+        document.addEventListener('DOMContentLoaded', async () => {
+            checkAuthState();
+
+            const user = auth.currentUser;
+            if (user) {
+                await loadUserData(user.email);
+            }
+            
+            if (user && miningTime > 0) {
+                startMining();
+            }
+        });
+        
+        
+  document.addEventListener('DOMContentLoaded', () => {
+            startMining();
+            window.addEventListener('focus', () => {
+                loadMiningData();
+                startMining();
+            });
+        });
+        
+  
+
+  
+  
+  
+        
+const usersRef = collection(db, "Users");
+
+
+
+
+const getReferredEmail = async (invitationCodeValue) => {
+    const usersRef = collection(db, "Users");
+    const querySnapshot = await getDocs(query(usersRef, where("invitationCode", "==", invitationCodeValue)));
+
+    if (!querySnapshot.empty) {
+        return querySnapshot.docs[0].data().email;
+    } else {
+        return null;
+    }
+};
+
+
+
+const countdownContainer = document.getElementById('countdownContainer');
+const countdownTimer = document.createElement('span');
+countdownTimer.textContent = '24:00:00'; // Set initial countdown time
+countdownTimer.style.fontSize = '6vw'; // Increase font size
+countdownTimer.style.fontFamily = 'Arial, sans-serif'; // Choose a professional font family
+countdownTimer.style.fontWeight = 'bold'; // Make the font bold for emphasis
+countdownTimer.style.color = 'white'; // Set font color to white
+countdownContainer.appendChild(countdownTimer); // Add countdown timer to countdown container
+
+function updateCountdownTimer(remainingTime) {
+  const remainingHours = Math.floor(remainingTime / (60 * 60 * 1000));
+  const remainingMinutes = Math.floor((remainingTime % (60 * 60 * 1000)) / (60 * 1000));
+  const remainingSeconds = Math.floor((remainingTime % (60 * 1000)) / 1000);
+  countdownTimer.textContent = `${remainingHours}:${remainingMinutes}:${remainingSeconds}`;
+}
+
+
+
+
+function startCountdown(remainingTime) {
+    setInterval(() => {
+        remainingTime -= 1000; // Subtract one second
+        if (remainingTime >= 0) {
+            updateCountdownTimer(remainingTime); // Update countdown timer
+        } else {
+            clearInterval(countdownInterval); // Clear interval when countdown reaches zero
+            countdownTimer.textContent = '24:00:00'; // Reset countdown timer to initial value
+        }
+    }, 1000);
+}
+
+
+
+
+
+const updateBtcBalanceInFirestore = async (btcToAdd) => {
+    const user = auth.currentUser;
+    if (user) {
+        try {
+            // Retrieve current Balance from Firestore
+            const userRef = doc(db, "Users", user.email);
+            const userDoc = await getDoc(userRef);
+            if (userDoc.exists()) {
+                const userData = userDoc.data();
+                const currentBtcBalance = userData.btcBalance || 0;
+                const lastBtcAdditionTime = userData.lastBtcAdditionTime || null;
+
+                // Check if 24 hours have passed since last addition
+                if (lastBtcAdditionTime) {
+                    const currentTime = new Date().getTime();
+                    const twentyFourHours = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+                    const elapsedTime = currentTime - new Date(lastBtcAdditionTime).getTime();
+                    if (elapsedTime < twentyFourHours) {
+                        console.log("Cannot add balance. Please wait 24 hours before adding more.");
+                        return;
+                    }
+                }
+
+                // Update balance in the HTML element
+                const balanceElement = document.getElementById('balance');
+                if (balanceElement) {
+                    // Retrieve current balance from HTML element
+                    const currentBalance = parseFloat(balanceElement.textContent);
+                    // Calculate new balance without affecting the current value
+                    const newBalance = currentBalance + 0.002;
+                    // Update balance in the HTML element
+                    balanceElement.textContent = newBalance.toFixed(10);
+                }
+
+                const currentTime = new Date().toISOString();
+                // Update balance and lastBtcAdditionTime in Firestore
+                await updateDoc(userRef, {
+                    btcBalance: currentBtcBalance + btcToAdd,
+                    lastBtcAdditionTime: currentTime
+                });
+
+            } else {
+                console.error("User data not found");
+            }
+        } catch (error) {
+            console.error("Error updating BTC balance in Firestore:", error);
+        }
+    } else {
+        console.error("User not authenticated");
+    }
+};
+
+
+
+
+
+
+
+const getLastBtcAdditionClickTimeFromFirestore = async () => {
+    const user = auth.currentUser;
+    if (user) {
+        const userEmail = user.email;
+        const userRef = doc(db, "Users", userEmail);
+        const userDoc = await getDoc(userRef);
+        if (userDoc.exists()) {
+            const userData = userDoc.data();
+            return userData.lastBtcAdditionTime || null;
+        } else {
+            console.error("User data not found");
+            return null;
+        }
+    } else {
+        console.error("User not authenticated");
+        return null;
+    }
+};
+
+const addBtcButton = document.getElementById('addBtcButton');
+addBtcButton.addEventListener('click', async () => {
+    const lastBtcAdditionClickTime = await getLastBtcAdditionClickTimeFromFirestore();
+
+    if (lastBtcAdditionClickTime !== null) {
+        const currentTime = new Date().getTime();
+        const twentyFourHours = 24 * 60 * 60 * 1000;
+        const elapsedTime = currentTime - new Date(lastBtcAdditionClickTime).getTime();
+        if (elapsedTime < twentyFourHours) {
+            const remainingTime = twentyFourHours - elapsedTime;
+            const remainingHours = Math.floor(remainingTime / (60 * 60 * 1000));
+            const remainingMinutes = Math.floor((remainingTime % (60 * 60 * 1000)) / (60 * 1000));
+            const remainingSeconds = Math.floor((remainingTime % (60 * 1000)) / 1000);
+            messageContainer.textContent = `Please wait ${remainingHours} hours and ${remainingMinutes} minutes and ${remainingSeconds} seconds before adding more balance.`;
+            setTimeout(() => {
+                messageContainer.textContent = '';
+            }, 3000);
+            return;
+        }
+    }
+
+    const btcToAdd = 0.00000012;
+    updateBtcBalanceInFirestore(btcToAdd);
+});
+
+window.addEventListener('load', async () => {
+    const lastBtcAdditionClickTime = await getLastBtcAdditionClickTimeFromFirestore();
+
+    if (lastBtcAdditionClickTime !== null) {
+        const currentTime = new Date().getTime();
+        const twentyFourHours = 24 * 60 * 60 * 1000;
+        const elapsedTime = currentTime - new Date(lastBtcAdditionClickTime).getTime();
+        if (elapsedTime < twentyFourHours) {
+            const remainingTime = twentyFourHours - elapsedTime;
+            const remainingHours = Math.floor(remainingTime / (60 * 60 * 1000));
+            const remainingMinutes = Math.floor((remainingTime % (60 * 60 * 1000)) / (60 * 1000));
+            const remainingSeconds = Math.floor((remainingTime % (60 * 1000)) / 1000);
+            messageContainer.textContent = `Please wait ${remainingHours} hours and ${remainingMinutes} minutes and ${remainingSeconds} seconds before adding more balance.`;
+            setTimeout(() => {
+                messageContainer.textContent = '';
+            }, 3000);
+        }
+    }
+});
+
+const messageContainer = document.createElement('div');
+document.body.appendChild(messageContainer);
+
+// إضافة حدث load للصفحة لتحديث العداد عند تحميل الصفحة
+window.addEventListener('load', async () => {
+    const lastBtcAdditionClickTime = await getLastBtcAdditionClickTimeFromFirestore();
+    if (lastBtcAdditionClickTime !== null) {
+        const currentTime = new Date().getTime();
+        const twentyFourHours = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+        const elapsedTime = currentTime - new Date(lastBtcAdditionClickTime).getTime();
+        if (elapsedTime < twentyFourHours) {
+            const remainingTime = twentyFourHours - elapsedTime;
+            updateCountdownTimer(remainingTime);
+            startCountdown(remainingTime);
+        }
+    }
+    // Start interval to update countdown timer every second
+    setInterval(async () => {
+        const lastClickTime = await getLastBtcAdditionClickTimeFromFirestore();
+        if (lastClickTime !== null) {
+            const currentTime = new Date().getTime();
+            const twentyFourHours = 24 * 60 * 60 * 1000;
+            const elapsedTime = currentTime - new Date(lastClickTime).getTime();
+            if (elapsedTime < twentyFourHours) {
+                const remainingTime = twentyFourHours - elapsedTime;
+                updateCountdownTimer(remainingTime);
+            }
+        }
+    }, 1000);
+});
+
+
+// تحديث الدالة updateBtcBalanceInFirestore لتحديث الرصيد
+
+
+startMiningButton.addEventListener('click', startMining);
+
+
+const imageInput = document.querySelector("#imageInput");
+const userImage = document.querySelector("#userImage");
+
+const uploadImageToDatabase = async (imageFile) => {
+    const user = auth.currentUser;
+    if (user) {
+        try {
+            // Convert image to base64 format
+            const reader = new FileReader();
+            reader.readAsDataURL(imageFile);
+            reader.onload = async () => {
+                const imageData = reader.result;
+                // Update user document in Firestore with the image data
+                await updateDoc(doc(db, "Users", user.email), {
+                    userImage: imageData
+                });
+                // Display the uploaded image
+                userImage.src = imageData;
+            };
+        } catch (error) {
+            console.error("Error uploading image to database:", error);
+        }
+    }
+};
+
+
+
+
+const retrieveImageFromDatabase = async () => {
+    const user = auth.currentUser;
+    if (user) {
+        try {
+            const userDoc = await getDoc(doc(db, "Users", user.email));
+            if (userDoc.exists()) {
+                const userData = userDoc.data();
+                const userImageData = userData.userImage;
+                if (userImageData) {
+                    // Display the retrieved image
+                    userImage.src = userImageData;
+                }
+            }
+        } catch (error) {
+            console.error("Error retrieving image from database:", error);
+        }
+    }
+};
+
+imageInput.addEventListener("change", (event) => {
+    const file = event.target.files[0];
+    uploadImageToDatabase(file);
+});
+
+// Retrieve and display the image when the page loads
+document.addEventListener("DOMContentLoaded", () => {
+    retrieveImageFromDatabase();
+});
+
+
+
+
+
+const updateReferralBalanceInUSD = () => {
+    const referralBalanceValue = parseFloat(referralBalanceDisplay.textContent);
+    if (!isNaN(referralBalanceValue)) {
+        const referralBalanceUSDValue = referralBalanceValue * xsunToUSD;
+        referralBalanceDisplayUSD.textContent = `$${referralBalanceUSDValue.toFixed(2)}`;
+    } else {
+        referralBalanceDisplayUSD.textContent = ""; 
+    }
+}
+
+
+
+const forgetPasswordButton = document.querySelector("#forgetPasswordButton");
+const passwordResetForm = document.querySelector("#passwordResetForm");
+const resetEmailInput = document.querySelector("#resetEmail");
+const sendResetEmailButton = document.querySelector("#sendResetEmailButton");
+const cancelResetButton = document.querySelector("#cancelResetButton");
+
+forgetPasswordButton.addEventListener('click', () => {
+    authForm.style.display = 'none';
+    passwordResetForm.style.display = 'block';
+});
+
+cancelResetButton.addEventListener('click', () => {
+    authForm.style.display = 'block';
+    passwordResetForm.style.display = 'none';
+});
+
+const isValidEmail = (email) => {
+    const emailRegex = /^[^\s@]+@gmail\.com$/;
+    return emailRegex.test(email);
+}
+
+const checkEmailExists = async (email) => {
+  const userRef = doc(db, "Users", email);
+  const userDoc = await getDoc(userRef);
+  return userDoc.exists();
+}
+
+
+
+sendResetEmailButton.addEventListener('click', async () => {
+    const email = resetEmailInput.value;
+
+    try {
+        if (!isValidEmail(email)) {
+            showMessage("Enter a valid email.");
+            return;
+        }
+
+        // Check if email exists in Firestore "Users" collection
+        const emailExists = await checkEmailExists(email);
+        if (!emailExists) {
+            showMessage("Email not found or account does not exist. Please enter a valid email.");
+            return;
+        }
+
+        // Email exists, send password reset email
+        await sendPasswordResetEmail(auth, email);
+        showMessage("Password reset email sent successfully!");
+        authForm.style.display = 'block';
+        passwordResetForm.style.display = 'none';
+    } catch (error) {
+        showMessage("Error sending password reset email: " + error.message);
+    }
+});
+
+
+
+
+
+// Function to verify identity
+const verifyIdentity = () => {
+    // Get input values
+    const fullName = document.getElementById('fullName').value;
+    const nationalID = document.getElementById('nationalID').value;
+    const idFront = document.getElementById('idFront').files[0];
+    const idBack = document.getElementById('idBack').files[0];
+    const selfie = document.getElementById('selfieButton').files[0];
+    
+    // Perform validation of input data (e.g., check if all fields are filled)
+    if (fullName && nationalID && idFront && idBack && selfie) {
+        // Perform further validation if needed
+        
+        // Upload images to Firebase Storage
+        const storageRef = firebase.storage().ref();
+        const idFrontRef = storageRef.child('id_front.jpg');
+        const idBackRef = storageRef.child('id_back.jpg');
+        const selfieRef = storageRef.child('selfie.jpg');
+        
+        idFrontRef.put(idFront).then((snapshot) => {
+            console.log('ID Front uploaded successfully');
+            idBackRef.put(idBack).then((snapshot) => {
+                console.log('ID Back uploaded successfully');
+                selfieRef.put(selfie).then((snapshot) => {
+                    console.log('Selfie uploaded successfully');
+                    
+                    // Identity verification successful
+                    alert('Identity verification successful!');
+                    // Redirect or perform further actions
+                }).catch(error => {
+                    console.error('Error uploading selfie:', error);
+                });
+            }).catch(error => {
+                console.error('Error uploading ID Back:', error);
+            });
+        }).catch(error => {
+            console.error('Error uploading ID Front:', error);
+        });
+    } else {
+        // Display error message if any field is empty
+        alert('Please fill in all fields');
+    }
+}
+
+  
+
+  
+
+
+        
+
+// عرض قيمة رمز الدعوة داخل صفحة "Invite Friends"
+
+    </script>
+</body>
+</html>
+
+   
+    <script>
+    
+
+   function copyInvitationCode() {
+  const invitationCode = document.getElementById('invitationCodeDisplay').textContent;
+  navigator.clipboard.writeText(invitationCode)
+    .then(() => {
+      document.getElementById('copyMessage').style.display = 'inline'; // Display "Copied" message
+      setTimeout(function() { document.getElementById('copyMessage').style.display = 'none'; }, 2000); // Hide message after 2 seconds
+    })
+    .catch((error) => {
+      console.error("Error copying invitation code:", error);
+    });
+}
+  
+
+function showEarnings() {
+  // إخفاء عناصر واجهة KYC (إذا كانت معروضة)
+  document.getElementById('kycContainer').style.display = 'none';
+
+  // إخفاء عناصر واجهة Roadmap (إذا كانت معروضة)
+  document.getElementById('roadMapContainer').style.display = 'none';
+
+  // إخفاء عناصر واجهة Secret Content (إذا كانت معروضة)
+  document.getElementById('secretContent').style.display = 'none';
+
+  // إخفاء عناصر واجهة Invite Friends (إذا كانت معروضة)
+  document.getElementById('inviteFriendsContainer').style.display = 'none';
+
+  // عرض عناصر واجهة Earnings
+  document.getElementById('earningsContainer').style.display = 'block';
+}
+
+
+
+
+
+
+        function showKyc() {
+  // إخفاء عناصر واجهة Roadmap (إذا كانت معروضة)
+  document.getElementById('roadMapContainer').style.display = 'none';
+
+  // إخفاء عناصر واجهة Earnings (إذا كانت معروضة)
+  document.getElementById('earningsContainer').style.display = 'none';
+
+  // إخفاء عناصر واجهة Secret Content (إذا كانت معروضة)
+  document.getElementById('secretContent').style.display = 'none';
+
+  // إخفاء عناصر واجهة Invite Friends (إذا كانت معروضة)
+  document.getElementById('inviteFriendsContainer').style.display = 'none';
+
+  // عرض عناصر واجهة KYC
+  document.getElementById('kycContainer').style.display = 'block';
+}
+
+
+
+function showRoadmap() {
+  document.getElementById('earningsContainer').style.display = 'none';
+  document.getElementById('kycContainer').style.display = 'none';
+
+  document.getElementById('roadMapContainer').style.display = 'block';  // عدلت هنا لعرض roadMapContainer
+
+  document.getElementById('inviteFriendsContainer').style.display = 'none'; // عدلت هنا لإخفاء inviteFriendsContainer
+  document.getElementById('secretContent').style.display = 'none'; // عدلت هنا لإخفاء secretContent
+  
+}
+
+
+
+
+
+
+
+function showMiningInterface() {
+  // إخفاء عناصر واجهة Roadmap (إذا كانت معروضة)
+  document.getElementById('roadMapContainer').style.display = 'none';
+
+  // إخفاء عناصر واجهة KYC (إذا كانت معروضة)
+  document.getElementById('kycContainer').style.display = 'none';
+
+  // إخفاء عناصر واجهة Earnings (إذا كانت معروضة)
+  document.getElementById('earningsContainer').style.display = 'none';
+
+  // عرض عناصر واجهة Secret Content
+  document.getElementById('secretContent').style.display = 'block';
+  
+  document.getElementById('inviteFriendsContainer').style.display = 'none';
+  
+  
+}
+
+
+
+
+        function toggleSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            if (sidebar.style.left === '-250px') {
+                sidebar.style.left = '0';
+            } else {
+                sidebar.style.left = '-250px';
+            }
+
+
+
+
+
+             // Function to close the sidebar...
+        function closeSidebar() {
+            var sidebar = document.getElementById("sidebar");
+            sidebar.style.left = "-250px";
+        }
+
+        // Add event listeners to close the sidebar when links are clicked...
+        var sidebarLinks = document.querySelectorAll(".sidebar a");
+        for (var i = 0; i < sidebarLinks.length; i++) {
+            sidebarLinks[i].addEventListener("click", closeSidebar);
+        }
+
+        // Add event listener to close the sidebar on mobile screen tap...
+        document.addEventListener("click", function(event) {
+            var screenWidth = window.innerWidth;
+            if (screenWidth <= 768) { // Adjust this value based on your design's breakpoint
+                if (!event.target.matches('.menu-button')) {
+                    closeSidebar();
+                }
+            }
+        });
+  
+            
+            
+            
+            
+            
+            // تحقق مما إذا كان لديك UID محفوظ في Local Storage
+// مصفوفة تحتوي على الأرقام من 0 إلى 9
+
+    
+
+}
+
+
+    
+       
+   function fillMax() {
+     var balance = document.getElementById("balance").innerText;
+     document.getElementById("amount").value = balance;
+   }
+       
+        
+  function enableEditing() {
+    var inputField = document.getElementById("enterWalletAddress");
+    inputField.removeAttribute("readonly");
+    inputField.focus();
+  }
+        
+// داخل دالة showInviteFriends()
+function showInviteFriends() {
+  // إخفاء جميع الصفحات ما عدا واجهة Invite Friends
+  document.getElementById('kycContainer').style.display = 'none';
+  document.getElementById('roadMapContainer').style.display = 'none';
+  document.getElementById('secretContent').style.display = 'none';
+  document.getElementById('earningsContainer').style.display = 'none';
+
+  // عرض عناصر واجهة Invite Friends
+  document.getElementById('inviteFriendsContainer').style.display = 'block';
+}  
+  
+  
+function openPopup(currency) {
+  var popup = document.getElementById('popup');
+  var reminder = document.getElementById('reminder');
+  var addressInput = document.getElementById('address');
+  var quantityInput = document.getElementById('quantity');
+  var swizaButton = document.getElementById('swizaButton');
+  var xsunButton = document.getElementById('xsunButton');
+  var bitcoinButton = document.getElementById('bitcoinButton');
+  var nearButton = document.getElementById('nearButton');
+  var usdtButton = document.getElementById('usdtButton');
+
+  popup.style.display = 'block';
+  reminder.style.display = 'none';
+  addressInput.value = '';
+  quantityInput.value = '';
+
+  // Hide all buttons first
+  swizaButton.style.display = 'none';
+  xsunButton.style.display = 'none';
+  bitcoinButton.style.display = 'none';
+  nearButton.style.display = 'none';
+  usdtButton.style.display = 'none';
+
+  // Show the button corresponding to the selected currency
+  if (currency === 'Swiza') {
+    swizaButton.style.display = 'block';
+    document.getElementById('network').innerHTML = '<option value="Bsc20">Bsc20</option><option value="Near">Near</option>';
+  } else if (currency === 'Xsun') {
+    xsunButton.style.display = 'block';
+    document.getElementById('network').innerHTML = '<option value="Erc20">Erc20</option><option value="Bsc20">Bsc20</option><option value="Near">Near</option>';
+  } else if (currency === 'Bitcoin') {
+    bitcoinButton.style.display = 'block';
+    document.getElementById('network').innerHTML = '<option value="Btc">Btc</option>';
+  } else if (currency === 'Near') {
+    nearButton.style.display = 'block';
+    document.getElementById('network').innerHTML = '<option value="Near">Near</option>';
+  } else if (currency === 'Usdt') {
+    usdtButton.style.display = 'block';
+    document.getElementById('network').innerHTML = '<option value="Tron">Tron</option><option value="Bsc20">Bsc20</option><option value="Erc20">Erc20</option>';
+  }
+  // Add more conditions for other currencies
+}
+
+function sendSwiza() {
+  showMessage();
+}
+
+function sendXsun() {
+  showMessage();
+}
+
+function sendBitcoin() {
+  showMessage();
+}
+
+function sendNear() {
+  showMessage();
+}
+
+function sendUsdt() {
+  showMessage();
+}
+
+function showMessage() {
+  document.getElementById('message').innerText = 'Not open yet';
+  document.getElementById('message').style.display = 'block';
+  setTimeout(function() {
+    document.getElementById('message').style.display = 'none';
+  }, 4000);
+}
+
+function cancel() {
+  document.getElementById('popup').style.display = 'none';
+}
+
+function validateInput(input) {
+}
+
+
+// تصفية البيانات المدخلة لمنع هجمات حقن الشفرة
+
+
+
+
+</script>
+</body>
+</html>

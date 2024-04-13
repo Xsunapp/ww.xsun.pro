@@ -41,40 +41,42 @@
 <div id="authForm" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(0, 0, 0, 0.5); padding: 30px; width: 80%; text-align: center;">
   <!-- محتوى الصفحة -->
 
-  
-  
 
-  
+ <img src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/immutable-x-imx-glass-crypto-coin-3d-illustration-free-png.png?alt=media&token=5cf5a220-fed2-41b8-a1fe-035e0e3c9a6e" alt="Logo" style="width: 30vw; height: 30vw; margin-right: 0vw;">
+
+
 <h2 style="color: white; font-size: 7vw;">
  𝓦𝓮𝓵𝓬𝓸𝓶𝓮 𝓣𝓸 𝓧𝓼𝓾𝓷! 🌟
 </h2>
 
 
 
+
   <input type="email" placeholder="Email" id="userEmail" style="width: 80%; margin-bottom: 10px;">
   <input type="password" placeholder="Password" id="userPassword" style="width: 80%; margin-bottom: 10px;">
   <br><br>
-  <input type="text" placeholder="Invitation Code (Required)" id="invitationCode" style="width: 80%; margin-bottom: 10px;">
-  <br><br>
-
-  <input type="checkbox" id="agreeCheckbox" style="margin-right: 5px;">
-  <label for="agreeCheckbox" style="color: white;">I Agree</label>
-  <a href="https://xsunapp.github.io/Privacy-ploicy-Xsun-app/" target="_blank" style="color: white; margin-left: 20px;">Privacy Policy</a> 
-
-  <br><br>
-  <button id="signUpButton" style="background-color: wheat; color: black; margin-right: 10px;">Sign Up</button>
-  <button id="signInButton" style="background-color: green; color: white; margin-left: 10px;">Sign In</button>
-  <br><br>
-
-  <div>
-    <button id="forgetPasswordButton" style="background-color: red; color: white;">Forget Password</button>
-  </div>
-
-  <div id="successMessage" style="color: red;"></div>
-
   
 
+<button id="signInButton" style="background-color: green; color: white; margin-left: 10px;">Sign In</button>
+
+
+ <button id="forgetPasswordButton" style="background-color: red; color: white;">Forget Password</button>
+ 
+  <button id="goToSignupButton" style="background-color: deepskyblue;" >Create an Account</button>
+  <div id="errorMessage" style="color: red;"></div>
+  <div id="successMessage" style="color: red;"></div>
+
     <p style="color:whitet; font-size: 12px;">🔗 𝕏𝕊𝕌ℕ ℕ𝔼𝕋𝕎𝕆ℝ𝕂 ℕ𝔼𝔸ℝ 𝔹𝕃𝕆ℂ𝕂ℍ𝔸𝕀ℕ. 🔗</p>
+
+
+ 
+</div>
+  
+   
+  
+
+
+  
 
 
       
@@ -90,9 +92,58 @@
 <div id="passwordResetForm" style="display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 60%;">
   <h2>Forget Password</h2>
   <input type="email" placeholder="Email" id="resetEmail" style="width: 80%;"><br><br>
-  <button id="sendResetEmailButton">Send Reset Email</button>
-  <button id="cancelResetButton">Cancel</button>
+  <button id="sendResetEmailButton" style=" background-color: red;">Send Reset Email</button>
+  <button id="cancelResetButton" style=" background-color: deepskyblue;">Cancel</button>
+  
 </div>
+  
+
+  
+
+
+
+
+<div id="signupForm" class="hidden" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(0, 0, 0, 0.5); padding: 30px; width: 80%; text-align: center;">
+  
+  
+   <img src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/immutable-x-imx-glass-crypto-coin-3d-illustration-free-png.png?alt=media&token=5cf5a220-fed2-41b8-a1fe-035e0e3c9a6e" alt="Logo" style="width: 30vw; height: 30vw; margin-right: 0vw;">
+  
+  
+<h2 style="color: white; font-size: 7vw;">
+ 𝓦𝓮𝓵𝓬𝓸𝓶𝓮 𝓣𝓸 𝓧𝓼𝓾𝓷! 🌟
+</h2>
+
+
+
+<input type="email" placeholder="Email" id="userEmail" style="width: 80%; margin-bottom: 10px;">
+  <input type="password" placeholder="Password" id="userPassword" style="width: 80%; margin-bottom: 10px;">
+  <br>
+  <input type="text" placeholder="Invitation Code (Required)" id="invitationCode" style="width: 80%; margin-bottom: 10px;">
+  <br>
+  <div>
+
+  <button onclick="generateInvitationCode()" style="background-color: orange; color: white; font-size: 14px;">Generate invitation Code</button>
+</div>
+
+  <input type="checkbox" id="agreeCheckbox" style="margin-right: 5px;">
+  <label for="agreeCheckbox" style="color: white;">I Agree</label>
+  <a href="https://xsunapp.github.io/Xsun.privacy-Policy/" target="_blank" style="color: white; margin-left: 20px;">Privacy Policy</a>
+  
+  <br><br>
+  <button id="signUpButton" style="background-color: green; color: white; margin-right: 10px;">Sign Up</button>
+  <br>
+         <button id="goToSigninButton" style=" background-color: red;">Already have an account</button>
+        <div id="errorMessageSignup" style="color: red;">
+          
+              <p style="color:whitet; font-size: 12px;">🔗 𝕏𝕊𝕌ℕ ℕ𝔼𝕋𝕎𝕆ℝ𝕂 ℕ𝔼𝔸ℝ 𝔹𝕃𝕆ℂ𝕂ℍ𝔸𝕀ℕ. 🔗</p>
+
+        </div>
+    </div>
+
+
+
+
+
 
 
 
@@ -120,7 +171,7 @@
 <a href="#" onclick="showInviteFriends()">Referral</a>
 <a href="#" onclick="showRoadmap()">Roadmap</a>
 <a href="#" onclick="showKyc()">kyc</a>
-<a id="telegramLink" href="https://bit.ly/3VCIpSq">android</a>
+<a id="telegramLink" href="https://bit.ly/3xu8bOt">android</a>
 
 <button id="signOutButton" style="margin-left: 15px;">Sign Out</button>
 
@@ -128,19 +179,23 @@
     
     
 </div>
+ <div id="confirmationDialog" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: black; padding: 20px; border: 1px solid #ccc; z-index: 10002;">
+   <p>Are you sure you want to logout?</p>
+   <button id="yesButton" style="margin-right: 5vw; background-color: red;">Yes</button>
+   <button id="noButton" style="margin-left: 4vw; background-color: red;">No</button>
+ </div>
 
 
 
 
-
-<div id="secretContent" style="background-color: white;">
+<div id="secretContent" style="background-color: black;">
     <!-- محتوى الصفحة -->
 
 
 
 
 
-<div style="position: absolute; text-align: center; top: 0%; left: 120vw; transform: translate( -50vw , 100vw); z-index: 9999; display: flex; flex-direction: row; justify-content: center;">
+<div style="position: absolute; text-align: center; top: 4%; left: 120vw; transform: translate( -50vw , 40vw); z-index: 9999; display: flex; flex-direction: row; justify-content: center;">
 
 
     <a href="https://www.instagram.com/xsun_team_official?igsh=OGQ5ZDc2ODk2ZA==" style="margin-right: 10px;">
@@ -160,77 +215,91 @@
   
   
   
-<div style="position: absolute; top: 18%; left: 37.8%; z-index: 9999;">
-   <img src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/near-9828546-7947908.png?alt=media&token=0c6a6e03-4528-4f67-97a6-2f74e2b17543" alt="icon" width="20" height="20">
-</div>
-
-
   
-  
-
-  
-  
-  
-  
-
-  
-<p style="color: black; position: absolute; top: 16.7%; z-index: 9999; left: 0%; font-size: 1.8vw; background-color: seagreen;">NETWORK NEAR BLOCKCHAIN</p>
-
-
 
 
   
 
 
-  <div style="display: flex; align-items: center; justify-content: flex-end; border-radius:0; position: relative; top: 0vh;">
-  <div style="width: 5vw; height: 5vw; display: flex; align-items: center; justify-content: center; border-radius: 50%; background-image: url('https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/bitcoin-225079_640.png?alt=media&token=e226582c-f4a8-4ee6-819c-0588d1a1a80f'); background-size: cover; background-position: center; margin-right: 1vw;"></div>
-  <span id="btcBalanceAmount" style="margin-right: 1vw; font-size: 4.5vw; color: black;">0.00000000000</span>
+  
+<p style="color: white; position: absolute; top: 25.9%; z-index: 9999; left: 2%; font-size: 1.8vw; background-color: red;">XSUN TOKEN TOTAL SUPPLY 36666</p>
+
+  
+  
+  
+
+  
+<p style="color: black; position: absolute; top: 20.7%; z-index: 9999; left: 2%; font-size: 1.8vw; background-color: seagreen;">NETWORK NEAR BLOCKCHAIN</p>
+
+
+
+
+<div style="position: absolute; top: 64.1vh; left: 56vw; z-index: 9999;">
+  <img src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/near-9828546-7947908.png?alt=media&token=0c6a6e03-4528-4f67-97a6-2f74e2b17543" alt="icon" width="33vw" height="33vw">
 </div>
 
 
 
-
-
-
-
-
-
-
-
-
-<div style="position: absolute; top: 16vw; right: 5.7vw; z-index: 9999;">
-   <img src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/internxt.png?alt=media&token=174fec9c-6370-40ae-b094-449bf4e3ec1c" alt="icon" width="60vw" height="60vw">
-</div>
-
-
-
-
-<div style="position: absolute; top: 17vh; right: 4.8vw; z-index: 9999; color: black; font-size: 3vw; text-align: center;">
-    <span class="same-style-bold">Total Supply<br> 36666</span>
-</div>
-
-<div style="position: absolute; top: 61vh; left: 51vw; z-index: 9999;">
-   <img src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/immutable-x-imx-glass-crypto-coin-3d-illustration-free-png.png?alt=media&token=5cf5a220-fed2-41b8-a1fe-035e0e3c9a6e" alt="icon" width="40vw" height="40vw">
+<div style="position: absolute; top: 76.7vh; left: 27vw; z-index: 9999;">
+  <img src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/immutable-x-imx-glass-crypto-coin-3d-illustration-free-png.png?alt=media&token=5cf5a220-fed2-41b8-a1fe-035e0e3c9a6e" alt="icon" width="39vw" height="39vw">
 </div>
 
 
 
 
 
-<div style="position: absolute; top: 27%; left: 2%; width: 95vw; text-align: left;">
-  <div class="info-box" style="margin-top: 0px; background-color: black; padding: 2vw; border-radius: 5px; border: none;">
-    <p style="font-size: 6vw; margin: 0;">Time Left: <span id="countdownContainer"></span></p>
-    <hr style="border: none; border-bottom: 0.1vw solid white; margin: 1vw 0; width: 80%;">
-    <p style="font-size: 6vw; margin: 1vw 0 0 0;">Balance: <span id="balance">0.0000000000</span></p>
-    <hr style="border: none; border-bottom: 0.1vw solid white; margin: 1vw 0; width: 80%;">
 
-    <p id="balanceInUSD" style="font-size: 6vw; margin: 1vw 0; width: 90%; margin-left: 0px;">Balance in USD: $0.00</p>
-    <hr style="border: none; border-bottom: 0.1vw solid white; margin: 1vw 0; width: 80%;">
+  
+  
+
+
+  <div style="display: flex; align-items: center; justify-content: flex-end; border-radius:0; position: relative; top: 9vh;">
+  <div style="width: 6vw; height: 6vw; display: flex; align-items: center; justify-content: center; border-radius: 50%; background-image: url('https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/bitcoin-225079_640.png?alt=media&token=e226582c-f4a8-4ee6-819c-0588d1a1a80f'); background-size: cover; background-position: center; margin-right: 1vw;"></div>
+  <span id="btcBalanceAmount" style="margin-right: 4vw; font-size: 5.5vw; color: white;">0.00000000000</span>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="position: absolute; top: 32.5%; left: 2%; width: 95vw; text-align: left; ">
+  <div class="info-box" style="margin-top: 0px; background-color: #333; padding: 2vw; border-radius: 5vw; border: none;">
+    <p style="font-size: 7vw; margin: 0; background-color: black; margin-left: 1vw;">Time Left: <span id="countdownContainer"></span></p>
+
+    <p style="font-size: 7vw; margin: 1vw 0 0 0; background-color: black; margin-left: 1vw;">Balance: <span id="balance">0.00000000</span></p>
+   
+
+    <p id="balanceInUSD" style="font-size: 7vw; margin: 1vw 0; width: 93%; margin-left: 1vw; background-color: black;">Balance in USD: $0.00</p>
+    
   </div>
 </div>
 
 
-<button id="addBtcButton" style="background-color: seagreen; font-size: 3vw; z-index: 9999; position: absolute; top: 56.5%; right: 35%; padding: 2vw 3vw; border: none; border-radius: 1vw; box-shadow: 0.2vw 0.4vw 0.8vw rgba(0, 0, 0, 0.3); cursor: pointer;">Start Mining</button>
+<button id="addBtcButton" style="background-color: mediumseagreen; font-size: 3.5vw; z-index: 9999; position: absolute; top: 61.3%; left: 37%; padding: 2vw 3vw; border: none; border-radius: 1vw; box-shadow: 0.2vw 0.4vw 0.8vw rgba(0, 0, 0, 0.3); cursor: pointer; color: white;">Start Mining</button>
 
 
 
@@ -238,27 +307,27 @@
 
   <button id="startMiningButton" onclick="startMining()" style="position: absolute; top: 60px; z-index: 999; display: none;">Start Mining</button>
 
-  <div id="confirmationDialog" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border: 1px solid #ccc; z-index: 10002;">
+  <div id="confirmationDialog" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: black; padding: 20px; border: 1px solid #ccc; z-index: 10002;">
     <p>Are you sure you want to logout?</p>
-      <button id="yesButton" style="margin-right: 20px;">Yes</button>
-      <button id="noButton" style="margin-left: 20px;">No</button>
+      <button id="yesButton" style="margin-right: 5vw; background-color: red;">Yes</button>
+      <button id="noButton" style="margin-left: 4vw; background-color: red;">No</button>
   </div>
 
 
   
- <button id="withdrawButton" disabled onclick="withdrawAmount()" class="disabled" style="color: white; position: absolute; top: 83%; left: 11%; transform: translate(-50%, -50%); z-index: 9999; padding: 2vw 3vw; border: none; border-radius: 1vw; background-color: seagreen;">Withdraw<span id="withdrawMessage" style="display: none;"></span></button>
+
+  
+
 
   
   
-  
-  
-<div style="position: absolute; top: 75.5%; left: 33%; transform: translate(-50%, -50%);">
+<div style="position: absolute; top: 78.5%; left: 35%; transform: translate(-50%, -50%);">
     <div class="input-container" style="margin-top: 2vw;">
         <input type="text" id="enterWalletAddress" placeholder="Enter Wallet Address" style="width: 60vw; height: 3vh; font-size: 3.3vw;" readonly onfocus="this.blur()">
     </div>
 </div>
 
-<div style="position: absolute; top: 68%; left: 26%; transform: translate(-50%, -50%);">
+<div style="position: absolute; top: 71%; left: 27.8%; transform: translate(-50%, -50%);">
     <div class="input-container" style="margin-bottom: 5vh;">
         <div style="display: flex; align-items: center;">
             <input type="text" id="amount" placeholder="Enter the amount" style="width: 30vw; height: 2vh; font-size: 3vw;" readonly onfocus="this.blur()">
@@ -268,7 +337,7 @@
 </div>
 
 
-<div style="position: absolute; top: 57vh; left: 2vw;">
+<div style="position: absolute; top: 60vh; left: 3.7vw;">
     <select id="networkSelect" style="width: 20vw; height: 2.5vh; font-size: 3vw;">
         <option value="NEAR">NEAR</option>
         <option value="BSC20">BSC20</option>
@@ -278,6 +347,19 @@
     </select>
 </div>
 
+
+
+  
+  
+ <button id="withdrawButton" disabled onclick="withdrawAmount()" class="disabled" style="color: white; position: absolute; top: 84.3%; left: 13%; transform: translate(-50%, -50%); z-index: 9999; padding: 2vw 3vw; border: none; border-radius: 1vw; background-color: lightslategray;">Withdraw<span id="withdrawMessage" style="display: none;"></span></button>
+
+  
+  
+  
+
+
+
+  
 
 
   
@@ -302,21 +384,22 @@
 
 
     
-<div id="navButtons" style="position: fixed; bottom: 0; left: 0; background-color: white; padding: 1px; display: flex; justify-content: space-between; width: 100%;">
-<button onclick="showInviteFriends()">👥 Referral</button>
-  
-<button onclick="showKyc()">🔐 KYC</button>
-    <button onclick="showRoadmap()">🗺️ Roadmap</button>
-    <button onclick="showMiningInterface()">🏠 Home</button>
+<div id="navButtons" style="position: fixed; bottom: 0vw; left: vw; background-color: black; padding: 1px; display: flex; justify-content: space-between; width: 100%; border-radius: 2vw;">
+<button onclick="showInviteFriends()" style="border-top-right-radius: 4vw; border-bottom-right-radius: 4vw; font-size: vw; background-color: #dc3545; margin-left: 3%;">👥 Referral</button>
 
+<button onclick="showKyc()" style= " font-size: vw; background-color: blueviolet;">🔐 KYC</button>
+<button onclick="showEarnings()" style= "font-size: vw; background-color: red;"> 💳Wallet</button>
+    <button onclick="showRoadmap()" style= " font-size: vw; margin-right: 3.5%; background-color: midnightblue;">🗺️ Roadmap</button>
+   
      </div>
 
 
 
 
 
+
     <!-- Button to show/hide sidebar -->
-    <div class="menu-button" onclick="toggleSidebar()">&#9776;</div>
+    <div class="menu-button" onclick="toggleSidebar()" style= "margin-left: 3vw; margin-top: 1.2vw; background-color: #333;">&#9776;</div>
     
 
 
@@ -397,8 +480,12 @@
 
     <!-- Roadmap container -->
   <div id="roadMapContainer">
-    
-    
+
+
+
+ 
+
+          
     <div class="menu-button" onclick="toggleSidebar()">&#9776;</div>
     
     
@@ -411,62 +498,96 @@
     
     
     
+
+ <hr style="border: none; border-bottom: 1vw solid ; margin: 0vw 0; width: 100%; position: relative; left: 0vw;">
+ 
+ 
+ 
+ 
+
     
     
-<div style="text-align: center; background-color: black; padding: 10px;">
-  <h2 style=" color: white; font-size: 6vw;">
-        📋𝑅𝒪𝒜𝒟𝑀𝒜𝒫 🔜    <br>
+    
+<div style="display: flex; justify-content: center; align-items: center; background-color: white; height: 9%;">
+  <h2 style="color: black; font-size: 6vw;">📋️
+️🆁🅾🅰🅳🅼🅰🅿⏳</h2>
+</div>
 
-    🗺️🚀 🌟
+ <hr style="border: none; border-bottom: 1vw solid ; margin: 0vw 0; width: 100%; position: relative; left: 0vw;">
+ 
 
 
 
+
+
+
+
+<div style="text-align: ;">
+
+
+
+
+    <div style="background-color: black; padding: 10px;">
+        <p style="font-size: 4.5vw; color: #dc3545; background-color: black">𝐉𝐮𝐥𝐲 𝟐𝟎𝟐𝟒</p>
+        <p style="color: #ffffff; font-size: 4vw;">𝐆𝐥𝐨𝐛𝐚𝐥 𝐀𝐜𝐭𝐢v𝐞  𝐔𝐬𝐞𝐫𝐬<br>𝐑𝐞𝐚𝐜𝐡:𝟎.𝟐𝐌
+
+
+
+
+ 🔥🔥</p>
 
   </h2>
-      <hr style="border: none; border-bottom: 0.1vw solid white; margin: 1vw 0; width: 100%;">
-
-</div>
-
-<div style="text-align: center;">
-  <div style="background-color: black; padding: 10px;">
-    <p style="font-size: 4.5vw; color: #dc3545; background-color: ">December 2023</p>
-      
-      <p style="color: #ffffff; font-size: 4vw;"> 🌞Xsun Launching 🎉
-</div>
-
-    <div style="background-color: black; padding: 10px;">
-        <p style="font-size: 4.5vw; color: #dc3545; background-color: black">July 2024</p>
-        <p style="color: #ffffff; font-size: 4vw;">Global Active Users<br>Reach: 0.2M 🔥</p>
+      <hr style="border: none; border-bottom: 1vw solid mistyrose; margin: 1vw 0; width: 100%;">
 
     </div>
 
     <div style="background-color: black; padding: 10px;">
-        <p style="font-size: 4.5vw; color: #dc3545; background-color: black">October 2024</p>
-        <p style="color: #ffffff; font-size: 4vw;">Launching an Intelligent Bot to transform real images into cartoons and directly send them to OpenSea⚡️</p>
+        <p style="font-size: 4.5vw; color: #dc3545; background-color: black">𝐎𝐜𝐭𝐨𝐛𝐞𝐫 𝟐𝟎𝟐𝟒</p>
+        <p style="color: #ffffff; font-size: 4vw;">𝐋𝐚𝐮𝐧𝐜𝐡𝐢𝐧𝐠 𝐚𝐧 𝐈𝐧𝐭𝐞𝐥𝐥𝐢𝐠𝐞𝐧𝐭 𝐁𝐨𝐭 𝐭𝐨 𝐭𝐫𝐚𝐧𝐬𝐟𝐨𝐫𝐦 𝐫𝐞𝐚𝐥 𝐢𝐦𝐚𝐠𝐞𝐬 𝐢𝐧𝐭𝐨 𝐜𝐚𝐫𝐭𝐨𝐨𝐧𝐬 𝐚𝐧𝐝 𝐝𝐢𝐫𝐞𝐜𝐭𝐥𝐲 𝐬𝐞𝐧𝐝 𝐭𝐡𝐞𝐦 𝐭𝐨 𝐎𝐩𝐞𝐧𝐒𝐞𝐚⚡️</p>
+        
+          </h2>
+      <hr style="border: none; border-bottom: 1vw solid mistyrose; margin: 1vw 0; width: 100%;">
+
     </div>
 
     <div style="background-color: black; padding: 10px;">
-        <p style="font-size: 4.5vw; color: #dc3545; background-color: black">December 2024</p>
-        <p style="color: #ffffff; font-size: 4vw;">Launching an Intelligent Telegram Bot, SUN GPT, filled with information and imagination🤖🤖 
+        <p style="font-size: 4.5vw; color: #dc3545; background-color: black">𝐃𝐞𝐜𝐞𝐦𝐛𝐞𝐫 𝟐𝟎𝟐𝟒</p>
+        <p style="color: #ffffff; font-size: 4vw;">𝐋𝐚𝐮𝐧𝐜𝐡𝐢𝐧𝐠 𝐚𝐧 𝐈𝐧𝐭𝐞𝐥𝐥𝐢𝐠𝐞𝐧𝐭 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐁𝐨𝐭, 𝐒𝐔𝐍 𝐆𝐏𝐓, 𝐟𝐢𝐥𝐥𝐞𝐝 𝐰𝐢𝐭𝐡 𝐢𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝐢𝐦𝐚𝐠𝐢𝐧𝐚𝐭𝐢𝐨𝐧🤖🤖 
+        
+          </h2>
+      <hr style="border: none; border-bottom: 1vw solid mistyrose; margin: 1vw 0; width: 100%;">
+
     </div>
 
     <div style="background-color: black; padding: 10px;">
-        <p style="font-size: 4.5vw; color: #dc3545; background-color: black">February 2025</p>
+        <p style="font-size: 4.5vw; color: #dc3545; background-color: black">𝐅𝐞𝐛𝐫𝐮𝐚𝐫𝐲 𝟐𝟎𝟐𝟓</p>
         <p style="color: #ffffff; font-size: 4vw;">
-          Add (10,000) Near Liquidity DEX Tools and<br> Open Users Withdraw🎉</p>
+          𝐀𝐝𝐝 (𝟏𝟎,𝟎𝟎𝟎) 𝐍𝐞𝐚𝐫 𝐋𝐢𝐪𝐮𝐢𝐝𝐢𝐭𝐲 𝐃𝐄𝐗 𝐓𝐨𝐨𝐥𝐬 𝐚𝐧𝐝<br>𝐎𝐩𝐞𝐧 𝐔𝐬𝐞𝐫𝐬 𝐖𝐢𝐭𝐡𝐝𝐫𝐚𝐰🎉</p>
+          
+            </h2>
+      <hr style="border: none; border-bottom: 1vw solid mistyrose; margin: 1vw 0; width: 100%;">
+
  
     </div>
 
 
 
 <div style="background-color: black; padding: 10px;">
-  <p style="font-size: 4.5vw; color: #dc3545; background-color: black;">March 2025</p>
-  <p style="color: white; font-size: 4vw;">My Token Listing on 3 Major Exchanges<br>🔁📉📈</p>
+  <p style="font-size: 4.5vw; color: #dc3545; background-color: black;">𝐌𝐚𝐫𝐜𝐡 𝟐𝟎𝟐𝟓</p>
+  <p style="color: white; font-size: 4vw;">𝐌𝐲 𝐓𝐨𝐤𝐞𝐧 𝐋𝐢𝐬𝐭𝐢𝐧𝐠 𝐨𝐧 𝟑 𝐌𝐚𝐣𝐨𝐫 𝐄𝐱𝐜𝐡𝐚𝐧𝐠𝐞𝐬<br>🔁📉📈</p>
+    </h2>
+      <hr style="border: none; border-bottom: 1vw solid mistyrose; margin: 1vw 0; width: 100%;">
+
 </div>
 
     <div style="background-color: black; padding: 10px;">
-        <p style="font-size: 4.5vw; color: #dc3545; background-color: black">April 2025</p>
-        <p style="color: white; background-color: black font-size: 4vw;">Upgrade🔄</p>
+        <p style="font-size: 4.5vw; color: #dc3545; background-color: black">𝐀𝐩𝐫𝐢𝐥 𝟐𝟎𝟐𝟓</p>
+        <p style="color: white; background-color: black font-size: 4vw;">𝐔𝐩𝐠𝐫𝐚𝐝𝐞🔄🏁</p>
+          </h2>
+      <hr style="border: none; border-bottom: 2vw solid mistyrose; margin: 1vw 0; width: 100%;">
+
+          </h2>
+
     </div>
 </div>
 
@@ -479,21 +600,24 @@
 
 
 
-<div id="navButtons" style="position: fixed; bottom: 0; left: 0; background-color: gray; padding: 1px; display: flex; justify-content: space-between; width: 100%;">
-<button onclick="showInviteFriends()">👥 Referral</button>
-  
-<button onclick="showKyc()">🔐 KYC</button>
-  <button onclick="showRoadmap()">🗺️ Roadmap</button>
-  <button onclick="showMiningInterface()">🏠 Home</button>
-</div>
+<div id="navButtons" style="position: fixed; bottom: 0vw; left: vw; background-color: black; padding: 1px; display: flex; justify-content: space-between; width: 100%; border-radius: 2vw;">
+<button onclick="showInviteFriends()" style="border-top-right-radius: 4vw; border-bottom-right-radius: 4vw; font-size: vw; background-color: #dc3545; margin-left: 2%;">👥 Referral</button>
+
+<button onclick="showKyc()" style= " font-size: vw; background-color: blueviolet;">🔐 KYC</button>
+<button onclick="showEarnings()" style= "font-size: vw; background-color: red;"> 💳Wallet</button>
+
+    <button onclick="showMiningInterface()" style= "border-radius: vw; font-size: vw; background-color: green; margin-right: 3.7%;">🏠 Home</button>
+
+     </div>
 
 </div>
-
 
     <!-- زر Home للانتقال إلى الواجهة الرئيسية -->
-<div id="earningsContainer" style="position: relative; top: 0vw; left: 0vw; right: 0vw; bottom: 0; background-color: white; display: none; width: 100vw; height: 35vw;">
+<div id="earningsContainer">
 
 
+
+ 
 
   <div class="menu-button" onclick="toggleSidebar()">&#9776;</div>
     
@@ -501,16 +625,24 @@
 
 
 
+ 
+ 
 
-
-<span style="font-size: 7vw; color: black; font-family: 'Arial', sans-serif; font-weight: bold; position: absolute; top: 15vw; left: 50%; transform: translateX(-50%); text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); letter-spacing: 2px;">𝒯𝑜𝓉𝒶𝓁 𝐵𝒶𝓁𝒶𝓃𝒸𝑒</span>
 
     
 
 
 
 
-<div style="position: absolute; text-align: center; top: 0%; right: 3%; transform: translate( -50% , 27vw); z-index: 9999; display: flex; flex-direction: row; justify-content: center;">
+
+
+<span style="font-size: 7vw; color: black; font-family: 'Arial', sans-serif; font-weight: bold; position: absolute; top:  0vw; left: 50%; transform: translateX(-50%); text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); letter-spacing: 2px; background-color: white; height: 37vw; width: 100vw; display: flex; justify-content: center; align-items: center;">𝒯𝑜𝓉𝒶𝓁 𝐵𝒶𝓁𝒶𝓃𝒸𝑒
+</span>
+
+    
+
+
+<div style="position: absolute; text-align: center; top: 3%; right: 3%; transform: translate( -50% , 23vw); z-index: 9999; display: flex; flex-direction: row; justify-content: center;">
 
 
     <a href="https://www.instagram.com/xsun_team_official?igsh=OGQ5ZDc2ODk2ZA==" style="margin-right: 10px;">
@@ -524,8 +656,18 @@
     </div>
   </div>
   
+
+      <hr style="border: none; border-bottom: 1vw solid green; margin: -10vw 0; width: 100%; position: absolute; left: 0vw;">
+     
+
+
+
+      <hr style="border: none; border-bottom: 1vw solid green; margin: 27vw 0; width: 100%; position: absolute; left: 0vw;">
+  
+  
   
 
+     
 
 
 
@@ -536,58 +678,86 @@
 
 
 
-<div style="display: flex; justify-content: center; margin-top: 50; transform: translateY(40vw);">
+
+<div style="display: flex; justify-content: center; margin-top: 10vw; transform: translateY(40vw); overflow-y: auto;  color: black; ">
   <table>
     <thead>
       <tr>
-        <th>Currency</th>
-        <th>Balance</th>
-        <th>Value</th>
-        <th>Action</th>
+        
+      <th style="padding-left: 1.5vw; background-color: ; font-size: 4.5vw;">𝐂𝐮𝐫𝐫𝐞𝐧𝐜𝐲</th>
+ <th style="; background-color: ; font-size: 4.5vw;">
+          
+          𝐁𝐚𝐥𝐚𝐧𝐜𝐞</th>
+       
+      
+<th style="padding-left: vw; background-color: ; font-size: 4.5vw;">         𝐕𝐚𝐥𝐮𝐞</th>
+       
+        <th style="padding-left: 1vw; background-color: ; font-size: 4.5vw;">𝐀𝐜𝐭𝐢𝐨𝐧</th>
+        <br><br>
+
+ 
       </tr>
-    </thead>
-    <tbody>
-      <tr>
+      
+      </thead>
+      <tbody>
+        <tr>
+
 
 <td>
-  <div style="display: flex; align-items: center;"><img class="currency-icon" src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/immutable-x-imx-glass-crypto-coin-3d-illustration-free-png.png?alt=media&token=5cf5a220-fed2-41b8-a1fe-035e0e3c9a6e" alt="" style="width: 40px; height: 40px; margin-right: 5px;"> XSUN</div>
+
+     
+  <div style="display: flex; align-items: center;"><img class="currency-icon" src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/immutable-x-8650913-6876145.png?alt=media&token=a8e35190-e903-4e42-be83-05fcad4e5e1b" alt="" style="width: 40px; height: 40px; margin-right: 1px;"> 𝐗𝐒𝐔𝐍</div>
 </td>
-<td class="balance" id="totalBalance">Total Balance</td>
 
-<td><span id="totalBalanceInUSD"></span></td>
+<td class="balance" id="totalBalance" style="font-size: 4.5vw; color: white;">00.00</td>
+<br>
 
-        <td><button onclick="openPopup('Xsun')" style="background-color: blue; color: white; padding: 5px 10px; border: none; border-radius: 5px;">Send</button></td>
+<td><span id="totalBalanceInUSD" style="font-size: 4.5vw; color: white;">$00.00</span></td>
+
+
+        <td><button onclick="openPopup('Xsun')" style="background-color: blue; color𝐔𝐍: white; padding: 5px 10px; border: none; border-radius: 5px;">Send</button></td>
       </tr>
       <tr>
-        <td><div style="display: flex; align-items: center;"><img class="currency-icon" src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/swiss-flag-round-badge_1308-72045__1_-removebg-preview.png?alt=media&token=b4105cd6-a982-4fd3-9e5c-f7032b9200b2" alt="" style="width: 41px; height: 41px; margin-right: 5px;"> SWZ</div></td>
-        <td class="balance">5000000</td>
-                  <td>$00.00</td>
+        
+     
+     
+             <td><div style="display: flex; align-items: center;"><img class="currency-icon" src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/bitcoin-225079_640-removebg-preview.png?alt=media&token=f9de5ffb-aa7f-4a8d-8f4e-a448b79902db.jpg" alt="" style="width: 37px; height: 37px; margin-right: 5px;"> 𝐁𝐓𝐂</div></td>
+<td class="balance" id="btcBalanceAmount" style="font-weight: bold; font-size: 4.5vw; color: white;">00.00</td>
+
+<td style="font-size: 4.5vw; color: white;">$00.00</td>
+        <td><button onclick="openPopup('Bitcoin')" style="background-color: blue; color: white; padding: 5px 10px; border: none; border-radius: 5px;">Send</button></td>
+      </tr>
+      <tr>   
+        
+        <td><div style="display: flex; align-items: center;"><img class="currency-icon" src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/swiss-flag-round-badge_1308-72045__1_-removebg-preview.png?alt=media&token=b4105cd6-a982-4fd3-9e5c-f7032b9200b2" alt="" style="width: 41px; height: 41px; margin-right: 5px;"> 𝐒𝐖𝐙</div></td>
+        <td class="balance" style="font-size: 4.5vw; color: white;">5000000</td>
+
+<td style="font-size: 4.5vw; color: white;">$00.00</td>
+
         <td><button onclick="openPopup('Swiza')" style="background-color: blue; color: white; padding: 5px 10px; border: none; border-radius: 5px;">Send</button></td>
       </tr>
       <tr>
-        <td><div style="display: flex; align-items: center;"><img class="currency-icon" src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D8%A8%D8%AF%D9%88%D9%86%20%D8%B9%D9%86%D9%88%D8%A7%D9%86%20(62).png?alt=media&token=74e2d28f-c0fc-47c2-95da-8032ba71c346" alt="" style="width: 40px; height: 40px; margin-right: 5px;"> SWEAT</div></td>
-        <td class="balance">50.00</td>
-        <td>$00.00</td>
+        <td><div style="display: flex; align-items: center;"><img class="currency-icon" src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D8%A8%D8%AF%D9%88%D9%86%20%D8%B9%D9%86%D9%88%D8%A7%D9%86%20(62).png?alt=media&token=74e2d28f-c0fc-47c2-95da-8032ba71c346" alt="" style="width: 40px; height: 40px; margin-right: 5px;"> 𝐒𝐖𝐄𝐀𝐓</div></td>
+        <td class="balance" style="font-size: 4.5vw; color: white;">50.00</td>
+<td style="font-size: 4.5vw; color: wheat;">$00.00</td>
         <td><button onclick="openPopup('Near')" style="background-color: blue; color: white; padding: 5px 10px; border: none; border-radius: 5px;">Send</button></td>
       </tr>
       <tr>
-        <td><div style="display: flex; align-items: center;"><img class="currency-icon" src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/bitcoin-225079_640-removebg-preview.png?alt=media&token=f9de5ffb-aa7f-4a8d-8f4e-a448b79902db.jpg" alt="" style="width: 37px; height: 37px; margin-right: 5px;"> BITCOIN</div></td>
-       <td class="balance" id="btcBalanceAmount">btc Balance</td>
-               <td>$00.00</td>
-        <td><button onclick="openPopup('Bitcoin')" style="background-color: blue; color: white; padding: 5px 10px; border: none; border-radius: 5px;">Send</button></td>
-      </tr>
-      <tr>
-        <td><div style="display: flex; align-items: center;"><img class="currency-icon" src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/near-9828546-7947908.png?alt=media&token=0c6a6e03-4528-4f67-97a6-2f74e2b17543" alt="" style="width: 40px; height: 40px; margin-right: 5px;"> NEAR</div></td>
-        <td class="balance">00.15</td>
-        <td>$00.00</td>
+
+
+
+
+
+
+        <td><div style="display: flex; align-items: center;"><img class="currency-icon" src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/near-9828546-7947908.png?alt=media&token=0c6a6e03-4528-4f67-97a6-2f74e2b17543" alt="" style="width: 40px; height: 40px; margin-right: 5px;"> 𝐍𝐄𝐀𝐑</div></td>
+       
+        <td class="balance" style="font-size: 4.5vw; color: white;">00.15</td>
+<td style="font-size: 4.5vw; color: white;">$00.00</td>
         <td><button onclick="openPopup('Near')" style="background-color: blue; color: white; padding: 5px 10px; border: none; border-radius: 5px;">Send</button></td>
       </tr>
     </tbody>
   </table>
 </div>
-
-
-
 
 
 
@@ -669,15 +839,18 @@
 
 
 
-<div id="navButtons" style="position: fixed; bottom: 0; left: 0; background-color: white; padding: 1px; display: flex; justify-content: space-between; width: 100%;">
-<button onclick="showInviteFriends()">👥 Referral</button>
-<button onclick="showKyc()">🔐 KYC</button>
-  <button onclick="showRoadmap()">🗺️ Roadmap</button>
-  <button onclick="showMiningInterface()">🏠 Home</button>
-</div>
+<div id="navButtons" style="position: fixed; bottom: -0%; left: 0vw; background-color: transparent; padding: 1px; display: flex; justify-content: space-between; width: 100%; border-radius: 2vw; z-index: 999">
+<button onclick="showInviteFriends()" style="border-top-right-radius: 4vw; border-bottom-right-radius: 4vw; font-size: vw; background-color: #dc3545; margin-left: 2%;">👥 Referral</button>
 
-    
-    
+  
+<button onclick="showKyc()" style= " font-size: vw; background-color: blueviolet;">🔐 KYC</button>
+
+    <button onclick="showRoadmap()" style= " font-size: vw; background-color: midnightblue;">🗺️ Roadmap</button>
+    <button onclick="showMiningInterface()" style= "border-radius: vw; font-size: vw; background-color: green; margin-right: 3.5%;">🏠 Home</button>
+
+     </div>
+
+  
   
         
         
@@ -705,11 +878,32 @@
 
 
    
-<div id="kycContainer" style="display: none; position: absolute; top: 20%; max-width: 80vw;">
-  <h2 style="color: white; margin: 0;">KYC Verification</h2>
+<div id="kycContainer" style="display: none; position: absolute; top: 14%; max-width: 80vw;">
+  
+  
+  
+
+
+
+    
+  
+  
+  <p style="background-color: ; color: antiquewhite; padding: 0px; margin-left: 3.8%; width: 70vw; position: relative; top: -3vh; font-size: 2vw; height: 16vh; text-align: ; line-height: 1.5; height: 12vw;">
+
+
+
+    <span style="display: inline-block; transform: translateY(3%); font-weight: bold; letter-spacing: px; background-color: black; border-radius: 2px;color: white;">𝐈𝐝𝐞𝐧𝐭𝐢𝐭𝐲 𝐯𝐞𝐫𝐢𝐟𝐢𝐜𝐚𝐭𝐢𝐨𝐧 𝐢𝐬 𝐜𝐫𝐮𝐜𝐢𝐚𝐥 𝐟𝐨𝐫 𝐞𝐧𝐡𝐚𝐧𝐜𝐢𝐧𝐠 𝐬𝐞𝐜𝐮𝐫𝐢𝐭𝐲 𝐚𝐧𝐝 𝐦𝐢𝐭𝐢𝐠𝐚𝐭𝐢𝐧𝐠 𝐥𝐞𝐠𝐚𝐥 𝐢𝐬𝐬𝐮𝐞𝐬. 𝐖𝐡𝐞𝐧 𝐢𝐭 𝐜𝐨𝐦𝐞𝐬 𝐭𝐨 𝐝𝐚𝐭𝐚, 𝐚𝐥𝐥 𝐢𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧 𝐢𝐬 𝐬𝐞𝐜𝐮𝐫𝐞𝐥𝐲 𝐝𝐞𝐥𝐞𝐭𝐞𝐝 𝐚𝐟𝐭𝐞𝐫 𝐯𝐞𝐫𝐢𝐟𝐢𝐜𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝐢𝐬 𝐧𝐨𝐭 𝐬𝐡𝐚𝐫𝐞𝐝 𝐰𝐢𝐭𝐡 𝐚𝐧𝐲 𝐭𝐡𝐢𝐫𝐝 𝐩𝐚𝐫𝐭𝐲.
+</span>
+  </p>
+  
+  
+  
+  
+  
+  <h2 style="color: white; margin: 0.5%; margin-left: 3vw; z-index: 10002">KYC Verification</h2>
   <p id="verificationStatus" style="color: red; margin: 0;"><img src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D8%A8%D8%AF%D9%88%D9%86%20%D8%B9%D9%86%D9%88%D8%A7%D9%86%20(51).png?alt=media&token=ab8e8367-141c-4599-835c-cd43f478561a" alt="Verification Badge" style="width: 10vw; height: 10vw; vertical-align: middle;"> <span style="position: relative; top: 4%;">You are not verified yet.</span></p>
 
-  <form id="kycForm" enctype="multipart/form-data" style="font-size: 2.5vw; margin: 0;">
+  <form id="kycForm" enctype="multipart/form-data" style="font-size: 2.5vw; margin: 0; margin-left: 4vw;">
     <!-- باقي النصوص والنموذج هنا -->
 
       <!-- باقي النصوص والنموذج هنا -->
@@ -722,9 +916,10 @@
       <input type="text" id="nationalID" name="nationalID" required style="margin: 0;">
     </div>
     
-<p style="background-color: black; color: antiquewhite; padding: 0px; margin-left: 21%; width: 70vw; position: absolute; top: -18vh; font-size: 4.5vw; height: 15vh; text-align: center; line-height: 1.5;">
-  <span style="display: inline-block; transform: translateY(3%); font-weight: bold; letter-spacing: 1px;">Identity verification<br> is temporarily unavailable<br></span>
-</p>
+
+
+ 
+
 
 
     <div class="menu-button" onclick="toggleSidebar()">&#9776;</div>
@@ -746,44 +941,34 @@
     </div>
     <label for="selfieButton" style="color: white; margin: 0; display: block;">Take a Selfie:</label>
     <input type="file" accept="image/*" id="selfieButton" name="selfieButton" capture="user" onclick="openCamera()" required style="margin: 0;">
-<button type="submit" style="margin: 13px; transform: translateY(-0px) translateX(60px); background-color: dodgerblue; color: white;">Submit KYC</button>
+ <button id="submitBtn" style="margin: 13px; transform: translateY(-0px) translateX(60px); background-color: dodgerblue; color: white;">Submit KYC</button>
 
-
-
-
-
-
-
-
+  
 
     
-  
-
-
-
-
-
-
-
-
-<div id="navButtons" style="position: fixed; bottom: 0; left: 0; background-color: black; padding: 1px; display: flex; justify-content: space-between; width: 100%;">
-<button onclick="showInviteFriends()">👥 Referral</button>
-<button onclick="showKyc()">🔐 KYC</button>
-  <button onclick="showRoadmap()">🗺️ Roadmap</button>
-  <button onclick="showMiningInterface()">🏠 Home</button>
-
-
-
-
-  
-  
-
-
-
-
-
-
+     
+<div id="confirmationMessage" class="confirmationMessage" style="display: none;">  
+    𝐈𝐃𝐄𝐍𝐓𝐈𝐓𝐘 𝐕𝐄𝐑𝐈𝐅𝐈𝐂𝐀𝐓𝐈𝐎𝐍<br>𝐓𝐄𝐌𝐏𝐎𝐑𝐀𝐑𝐈𝐋𝐘 𝐔𝐍𝐀𝐕𝐀𝐈𝐋𝐀𝐁𝐋𝐄
 </div>
+
+
+
+
+
+
+
+
+<div id="navButtons" style="position: fixed; bottom: 0vw; left: 2vw; background-color: black; padding: 1px; display: flex; justify-content: space-between; width: 100%; border-radius: 2vw;">
+<button onclick="showInviteFriends()" style="border-top-right-radius: 4vw; border-bottom-right-radius: 4vw; font-size: vw; background-color: #dc3545; margin-left: 0vw;">👥 Referral</button>
+
+
+<button onclick="showEarnings()" style= "font-size: vw; background-color: red;"> 💳Wallet</button>
+    <button onclick="showRoadmap()" style= " font-size: vw; background-color: midnightblue;">🗺️ Roadmap</button>
+    <button onclick="showMiningInterface()" style= "border-radius: vw; font-size: vw; background-color: green; margin-right: 5%;">🏠 Home</button>
+
+     </div>
+
+
 </div>
 
       
@@ -811,7 +996,7 @@
 
 
 <div style="position: absolute; top: 10.5%; left: 64%; transform: translateX(-50%); z-index: 999; text-align: center;">
-  <span id="invitationCodeDisplay" style="font-size: 28px; color: red; background-color: white;"></span>
+  <span id="invitationCodeDisplay" style="font-size: 28px; color: red; background-color: white; border-radius: 2vw;"></span>
   
   <button onclick="copyInvitationCode()" style="margin-top: 10px; padding: 5px 10px; font-size: 16px; cursor: pointer;">Copy</button>
   <span id="copyMessage" style="font-size: 18px; color: white; display: none; margin-top: 5px;">Copied</span>
@@ -826,7 +1011,7 @@
 
   <div style="display: flex; align-items: center; justify-content: flex-end; border-radius:0; position: relative; top: 5vh;">
   <div style="width: 10.5vw; height: 10.5vw; display: flex; align-items: center; justify-content: center; border-radius: 50%; background-image: url('https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D8%A8%D8%AF%D9%88%D9%86%20%D8%B9%D9%86%D9%88%D8%A7%D9%86%20(52).png?alt=media&token=a585acb8-b02e-40d2-8bf4-965275599e98'); background-size: cover; background-position: center; margin-right: 1vw;"></div>
-  <span id="referralBalanceUSD" style="margin-right: 1vw; font-size: 10vw; color: white;">0.00000000000</span>
+  <span id="referralBalanceUSD" style="margin-right: 5vw; font-size: 10vw; color: white;">0.00000000000</span>
 </div>
 
 
@@ -836,7 +1021,7 @@
 
   <div style="display: flex; align-items: center; justify-content: flex-end; border-radius:0; position: relative; top: 10vh;">
   <div style="width: 10.5vw; height: 10.5vw; display: flex; align-items: center; justify-content: center; border-radius: 50%; background-image: url('https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/internxt.png?alt=media&token=174fec9c-6370-40ae-b094-449'); background-size: cover; background-position: center; margin-right: 1vw;"></div>
-  <span id="referralBalance" style="margin-right: 1vw; font-size: 10vw; color: white;">0.00000000000</span>
+  <span id="referralBalance" style="margin-right: 5vw; font-size: 10vw; color: white;">0.00000000000</span>
       
 </div>
 
@@ -863,7 +1048,7 @@
 
 
 
-<p style="font-size: 4vw; margin-top: 92%; margin-left: 5%; position: absolute; top: 0; left: 0;">your team <span id="referralHistory">0</span></p>
+<p style="font-size: 4vw; margin-top: 92%; margin-left: 5%; position: absolute; top: 0; left: 0; color: greenyellow;">YOUR TEAM <span id="referralHistory">0</span></p>
 
         <!-- نموذج لإدخال رمز الدعوة -->
 
@@ -878,19 +1063,26 @@
 
 
 
-<div id="navButtons" style="position: fixed; bottom: 0; left: 0; background-color: black; padding: 1px; display: flex; justify-content: space-between; width: 100%;">
-  <button onclick="showInviteFriends()">👥 Referral</button>
-<button onclick="showKyc()">🔐 KYC</button>
-  <button onclick="showRoadmap()">🗺️ Roadmap</button>
-  <button onclick="showMiningInterface()">🏠 Home</button>
-</div>
+<div id="navButtons" style="position: fixed; bottom: 0vw; left: 0vw; background-color: transparent; padding: 1px; display: flex; justify-content: space-between; width: 100%; border-radius: 2vw;">
+
+  
+ <button onclick="showRoadmap()" style= " font-size: vw; background: midnightblue; border-top-right-radius: 4vw; border-bottom-right-radius: 4vw; margin-left: 2%;">🗺️ Roadmap</button>
+  
+<button onclick="showKyc()" style= " font-size: vw;  background-color: blueviolet; ">🔐 KYC</button>
+<button onclick="showEarnings()" style= "font-size: vw; background: red"> 💳Wallet</button>
+
+    <button onclick="showMiningInterface()" style= "border-radius: vw; font-size: vw; background-color: green; margin-right: 4.5%; ">🏠 Home</button>
+
+     </div>
 
 </div>
 
 
 
-   
-   
+<div id="loadingIndicator" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+  <div class="spinner" style="display: inline-block; vertical-align: middle;"></div>
+</div>
+
    
    
    
@@ -907,7 +1099,7 @@
         body {
             font-family: Arial, sans-serif;
             /* اجعل الصورة خلفية للجسم وقم بتكرارها */
-            background: url('/Kkkkk6bd4cxzsdc.png') no-repeat center center fixed;
+            background: url('/.png') no-repeat center center fixed;
             /* ضبط حجم الصورة بنسبة 100% من حجمها الأصلي */
             background-size: 100% 100%;
             color: white;
@@ -940,6 +1132,24 @@
 
 
 
+.spinner {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #333;
+  animation: spin 1s linear infinite;
+  border-left-color: white;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 
 
@@ -995,6 +1205,14 @@
   
 }
 
+
+#earningsContainer {
+display: none;
+  height: 120vh;
+}
+
+
+}
 
 
         /* تنسيق رسائل "Not open yet" */
@@ -1182,29 +1400,32 @@ p, button, input, strong {
 table {
     background-color: black; /* تغيير لون خلفية الجدول إلى الأسود */
     color: whitesmoke; /* تغيير لون النص إلى الأبيض */
-    width: 95%;
+    width: 102%;
     border-collapse: ;
      /* زيادة ارتفاع الجدول إلى 90% من ارتفاع الشاشة */
 
-
+margin-left: px;
 }
 
 
 th, td {
     padding: 0:px;
     text-align: left;
-    border-bottom: 10vw solid black;
+    border-bottom: 12vw solid black;
+  height: vh;
 }
 th {
     background-color: black;
+    width: 80%;
     
+    color: yellow;
+border-radius: px;
 }
 .currency-icon {
   font-size: 10px;
   margin-right: 5px;
   color: black;
           
-            
   /* تغيير لون الأيقونات إلى الأسود */
 }
 .balance {
@@ -1261,7 +1482,7 @@ th {
             /* Start hidden off-screen */
             top: 0;
             width: 240px;
-            height: 100%;
+            height: 91%;
             background-color: black;
             overflow-x: hidden;
             padding-top: 20px;
@@ -1687,10 +1908,29 @@ h1 {
 }
 
 
-
+        #authForm {
+          display: none;
+          /* إخفاء واجهة التسجيل عند تحميل الصفحة */
+        }
   
-  
 
+
+
+
+
+.confirmationMessage {
+ background-color: red;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  text-align: center; 
+   width: 60%;
+}
   
    </style>
    
@@ -1747,26 +1987,33 @@ import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.17.1/firebase
 
     
         const firebaseConfig = {
-            apiKey: "AIzaSyCtPB6FBM0-xr3VdpcZOypdtPNWSrdRqFo",
-            authDomain: "xsun-b171d.firebaseapp.com",
-            projectId: "xsun-b171d",
-            storageBucket: "xsun-b171d.appspot.com",
-            messagingSenderId: "225050078666",
-            appId: "1:225050078666:web:ab797e8fff75f151697333",
-            measurementId: "G-PNNR5KG1V6"
-        };
-
+  apiKey: "AIzaSyCtPB6FBM0-xr3VdpcZOypdtPNWSrdRqFo",
+  authDomain: "xsun-b171d.firebaseapp.com",
+  projectId: "xsun-b171d",
+  storageBucket: "xsun-b171d.appspot.com",
+  messagingSenderId: "225050078666",
+  appId: "1:225050078666:web:ab797e8fff75f151697333",
+  measurementId: "G-PNNR5KG1V6"
+};
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
         const db = getFirestore(app);
-
-        const userEmail = document.querySelector("#userEmail");
+         
+         const userEmail = document.querySelector("#userEmail");
         const userPassword = document.querySelector("#userPassword");
+        const signUpEmail = document.querySelector("#signupEmail");
+        const signUpPassword = document.querySelector("#signupPassword");
         const authForm = document.querySelector("#authForm");
+        const signupForm = document.querySelector("#signupForm");
         const secretContent = document.querySelector("#secretContent");
-        const signUpButton = document.querySelector("#signUpButton");
         const signInButton = document.querySelector("#signInButton");
+        const signUpButton = document.querySelector("#signUpButton");
         const signOutButton = document.querySelector("#signOutButton");
+        const goToSignupButton = document.querySelector("#goToSignupButton");
+        const goToSigninButton = document.querySelector("#goToSigninButton");
+        const errorMessage = document.querySelector("#errorMessage");
+        const errorMessageSignup = document.querySelector("#errorMessageSignup");
+
         const countdownElement = document.querySelector("#countdown");
         const balanceElement = document.querySelector("#balance");
         const balanceInUSD = document.querySelector("#balanceInUSD");
@@ -1776,6 +2023,15 @@ import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.17.1/firebase
         
         const invitationCodeInput = document.querySelector("#invitationCodeInput");
         
+        
+        
+        const toggleForms = () => {
+            authForm.classList.toggle("hidden");
+            signupForm.classList.toggle("hidden");
+            errorMessage.textContent = ""; // Clear error messages when toggling forms
+            errorMessageSignup.textContent = ""; // Clear error messages when toggling forms
+        }
+
         
 
    const analytics = getAnalytics(app);
@@ -1924,9 +2180,7 @@ const updateBalanceInDatabase = async (newBalance) => {
 
 
         
-        
-
-
+       
 
         const saveMiningData = () => {
             const user = auth.currentUser;
@@ -1953,19 +2207,21 @@ const loadMiningData = async () => {
         }
 
 
-        const checkAuthState = () => {
-          onAuthStateChanged(auth, user => {
-            if (user) {
-              authForm.style.display = 'none';
-              secretContent.style.display = 'block';
-              loadUserData(user.email);
+        const checkAuthState = async () => {
+            onAuthStateChanged(auth, user => {
+                if (user) {
+                    authForm.style.display = 'none';
+                    signupForm.style.display = 'none';
+                    secretContent.style.display = 'block';
+               loadUserData(user.email);
             } else {
-              authForm.style.display = 'block';
-              secretContent.style.display = 'none';
-            }
-          })
+                    authForm.style.display = 'block';
+                    signupForm.style.display = 'none';
+                    secretContent.style.display = 'none';
+                }
+            })
         }
-        
+
         
        const loadUserData = async (email) => {
     const userDoc = await getDoc(doc(db, "Users", email));
@@ -1978,13 +2234,16 @@ const loadMiningData = async () => {
         const referralBalance = userData.referralBalance || 0;
         
         // حساب إجمالي الرصيد
-        const totalBalance = parseFloat(userData.balance) + parseFloat(referralBalance);
-        
+        const totalBalance = parseFloat(userData.balance) + parseFloat(referralBalance)
+
         // عرض إجمالي الرصيد في العنصر Total balance
-        const totalBalanceElement = document.getElementById('totalBalance');
-        if (totalBalanceElement) {
-            totalBalanceElement.textContent = totalBalance.toFixed(10);
-        }
+const totalBalanceElement = document.getElementById('totalBalance');
+if (totalBalanceElement) {
+  totalBalanceElement.textContent = totalBalance.toFixed(7);
+}
+
+
+
         
         // متابعة باقي العمليات...
     
@@ -2146,21 +2405,52 @@ const incrementAccountCount = () => {
   localStorage.setItem('accountCount', accountCount);
 };
 
+
+
+
+
 const userSignUp = async () => {
-  const signUpEmail = userEmail.value;
-  const signUpPassword = userPassword.value;
+    const signUpEmail = document.querySelector("#signupForm #userEmail").value;
+    const signUpPassword = document.querySelector("#signupForm #userPassword").value;
+    const invitationCode = document.querySelector("#signupForm #invitationCode").value;
+    const agreeCheckbox = document.querySelector("#signupForm #agreeCheckbox");
 
-  if (!isValidGmail(signUpEmail)) {
-    showMessage("Enter a valid Gmail address");
-    return;
-  }
+    // تحقق من وجود بريد إلكتروني
+    if (!signUpEmail) {
+        showMessageSignup("Enter email");
+        return;
+    }
 
-  if (!/^(?=.*[A-Za-z])(?=.*\d).{6,}$/.test(signUpPassword)) {
-    showMessage("Password must contain both letters and numbers and be at least 6 characters long");
-    return;
-  }
+    if (!isValidGmail(signUpEmail)) {
+        showMessageSignup("Enter a valid Gmail address");
+        return;
+    }
 
-  const deviceID = checkDeviceID();
+    // تحقق من وجود كلمة مرور
+    if (!signUpPassword) {
+        showMessageSignup("Enter password");
+        return;
+    }
+
+    if (!/^(?=.*[A-Za-z])(?=.*\d).{6,}$/.test(signUpPassword)) {
+        showMessageSignup("Password must contain both letters and numbers and be at least 6 characters long");
+        return;
+    }
+
+    // تحقق من وجود رمز الدعوة
+    if (!invitationCode) {
+        showMessageSignup("Enter invitation code");
+        return;
+    }
+
+    // تحقق من الموافقة على الشروط والأحكام
+    if (!agreeCheckbox.checked) {
+        showMessageSignup("Please agree to the terms and conditions");
+        return;
+    }
+    
+    
+    const deviceID = checkDeviceID();
   if (!deviceID) {
     setDeviceID(deviceID);
   }
@@ -2173,61 +2463,66 @@ const userSignUp = async () => {
   if (accountCount >= MAX_ACCOUNTS_PER_DEVICE) {
     showMessage("You have reached the maximum limit of accounts on this device");
     return;
-  }
-  if (!checkAgreement()) {
-    return;
-  }
-  try {
-    // Generate a new invitation code for the user
-    const newInvitationCode = generateInvitationCode();
+  }  
+    
 
-    // Generate a new UID for the user
-    const newUID = generateUID();
+    try {
+        const newInvitationCode = generateInvitationCode();
+        // Generate a new UID for the user
+        const newUID = generateUID();
 
-    // Check if the new invitation code is already in use
-    const referredEmail = await getReferredEmail(invitationCode.value.trim());
-    if (referredEmail) {
-      const userCredential = await createUserWithEmailAndPassword(auth, signUpEmail, signUpPassword);
-      // Save the new invitation code, UID, and user data to the database
-      await setDoc(doc(db, "Users", signUpEmail), {
-        miningTime: 43200,
-        balance: 0.05,
-        btcBalance: 0.000000001, // Initial Bitcoin balance
-        email: signUpEmail,
-        invitationCode: newInvitationCode,
-        referralBalance: 0, // Initialize referral balance to 0
-        referralHistory: [], // Initialize referral history to an empty array
-        uid: newUID, // Add the UID to the saved user data
-        password: signUpPassword // Save the password to the database
-      }, { merge: true });
+        // Check if the new invitation code is already in use
+        const referredEmail = await getReferredEmail(invitationCode.trim());
+        if (referredEmail) {
+            const userCredential = await createUserWithEmailAndPassword(auth, signUpEmail, signUpPassword);
 
-      showMessage("Your account has been created successfully!");
-      incrementAccountCount();
+            // Save the new invitation code, UID, and user data to the database
+            await setDoc(doc(db, "Users", signUpEmail), {
+                miningTime: 43200,
+                balance: 0.05, // Updated balance value with the addition of 0.002
+                btcBalance: 0.000000001, // Initial Bitcoin balance
+                email: signUpEmail,
+                invitationCode: newInvitationCode,
+                referralBalance: 0, // Initialize referral balance to 0
+                referralHistory: [], // Initialize referral history to an empty array
+                uid: newUID, // Add the UID to the saved user data
+                password: signUpPassword // Save the password to the database
+            }, { merge: true });
 
-      // Update referral balance for the referring user
-      await updateReferralBalance(referredEmail);
+            showMessage("Your account has been created successfully!");
+            incrementAccountCount();
 
-      // Update referral history for the referring user
-      await updateReferralHistory(referredEmail, signUpEmail);
+            // Update referral balance for the referring user
+            await updateReferralBalance(referredEmail);
 
-      // Update invitation code display only for the newly created account
-      const invitationCodeDisplay = document.querySelector("#invitationCodeDisplay");
-      invitationCodeDisplay.value = "Invitation Code: " + newInvitationCode;
+            // Update referral history for the referring user
+            await updateReferralHistory(referredEmail, signUpEmail);
 
-      // Add 0.000000001 BTC to the user's BTC balance in the database
-      const btcToAdd = 0.0000000012;
-      updateBalance(btcToAdd);
-      updateBtcBalanceInFirestore(btcToAdd);
-    } else {
-      showMessage("Invalid invitation code.");
-      return;
+            // Update invitation code display only for the newly created account
+            const invitationCodeDisplay = document.querySelector("#invitationCodeDisplay");
+            invitationCodeDisplay.value = "Invitation Code: " + newInvitationCode;
+
+            // Add 0.000000001 BTC to the user's BTC balance in the database
+            const btcToAdd = 0.0000000012;
+            updateBalance(btcToAdd);
+            updateBtcBalanceInFirestore(btcToAdd);
+        } else {
+            showMessage("Invalid invitation code.");
+            return;
+        }
+    } catch (error) {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        showMessage("Error: " + errorCode + " " + errorMessage);
     }
-  } catch (error) {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    showMessage("Error: " + errorCode + " " + errorMessage);
-  }
 };
+
+// Function to display error messages for sign up form
+const showMessageSignup = (message) => {
+    const messageElement = document.querySelector("#errorMessageSignup");
+    messageElement.textContent = message;
+};
+
 
 
 const updateReferralBalance = async (referringUserEmail) => {
@@ -2299,8 +2594,19 @@ const getReferralHistory = async (email) => {
   const signInEmail = userEmail.value;
   const signInPassword = userPassword.value;
 
+  // تحقق من وجود بريد إلكتروني
+  if (!signInEmail) {
+    showMessage("Enter email");
+    return;
+  }
+
   if (!isValidGmail(signInEmail)) {
     showMessage("Enter a valid Gmail address");
+    return;
+  }
+
+  if (!signInPassword) {
+    showMessage("Enter password");
     return;
   }
 
@@ -2322,6 +2628,7 @@ const getReferralHistory = async (email) => {
       }
     });
 };
+
 
 
 const userSignOut = async () => {
@@ -2347,13 +2654,8 @@ const cancelLogout = () => {
 document.getElementById("yesButton").addEventListener("click", confirmLogout);
 document.getElementById("noButton").addEventListener("click", cancelLogout);
 
-     // أضف مستمع حدث orientationchange
-// أضف مستمع حدث orientationchange
-// استمع للنقر على النافذة
-// استمع للنقر على النافذة
 
 
-// إضافة المستمعين للأزرار نعم ولا
 
 const showMessage = (message) => {
   const messageElement = document.createElement("div");
@@ -2397,40 +2699,54 @@ const showMessage = (message) => {
             // Logic to enable editing
         }
 
-        checkAuthState();
 
-        signUpButton.addEventListener('click', userSignUp);
-        signInButton.addEventListener('click', userSignIn);
-        
-        startMiningButton.addEventListener('click', startMining);
-        
+
+
+
+
+                      
+          
         document.addEventListener('DOMContentLoaded', async () => {
-            checkAuthState();
+    
+    
+checkAuthState();
 
-            const user = auth.currentUser;
-            if (user) {
-                await loadUserData(user.email);
-            }
-            
-            if (user && miningTime > 0) {
-                startMining();
-            }
-        });
-        
-        
-  document.addEventListener('DOMContentLoaded', () => {
-            startMining();
-            window.addEventListener('focus', () => {
-                loadMiningData();
-                startMining();
-            });
-        });
-        
-  
+const user = auth.currentUser;
+if (user) {
+    showLoadingIndicator(); // عرض شريط التحميل
+    loadUserData(user.email);
+}
 
-  
-  
-  
+if (user && miningTime > 0) {
+    startMining(); // بدء التعدين دون إعادة تحميل الصفحة
+}
+
+signInButton.addEventListener('click', userSignIn);
+signUpButton.addEventListener('click', userSignUp);
+
+goToSignupButton.addEventListener('click', () => {
+    signupForm.style.display = 'block';
+    authForm.style.display = 'none';
+});
+goToSigninButton.addEventListener('click', () => {
+    authForm.style.display = 'block';
+    signupForm.style.display = 'none';
+});
+
+window.addEventListener('load', hideLoadingIndicator); // إخفاء شريط التحميل بمجرد اكتمال تحميل الموقع
+
+function showLoadingIndicator() {
+    const loadingIndicator = document.getElementById('loadingIndicator');
+    loadingIndicator.style.display = 'block';
+}
+
+function hideLoadingIndicator() {
+    const loadingIndicator = document.getElementById('loadingIndicator');
+    loadingIndicator.style.display = 'none';
+}
+
+
+        });
         
 const usersRef = collection(db, "Users");
 
@@ -2453,7 +2769,7 @@ const getReferredEmail = async (invitationCodeValue) => {
 const countdownContainer = document.getElementById('countdownContainer');
 const countdownTimer = document.createElement('span');
 countdownTimer.textContent = '24:00:00'; // Set initial countdown time
-countdownTimer.style.fontSize = '6vw'; // Increase font size
+countdownTimer.style.fontSize = '7vw'; // Increase font size
 countdownTimer.style.fontFamily = 'Arial, sans-serif'; // Choose a professional font family
 countdownTimer.style.fontWeight = 'bold'; // Make the font bold for emphasis
 countdownTimer.style.color = 'white'; // Set font color to white
@@ -2494,6 +2810,7 @@ const updateBtcBalanceInFirestore = async (btcToAdd) => {
             const userDoc = await getDoc(userRef);
             if (userDoc.exists()) {
                 const userData = userDoc.data();
+                const currentBalance = userData.balance || 0; // Get the current balance
                 const currentBtcBalance = userData.btcBalance || 0;
                 const lastBtcAdditionTime = userData.lastBtcAdditionTime || null;
 
@@ -2508,20 +2825,19 @@ const updateBtcBalanceInFirestore = async (btcToAdd) => {
                     }
                 }
 
+                // Calculate new balance with the addition of btcToAdd
+                const newBalance = currentBalance + 0.002;
+
                 // Update balance in the HTML element
                 const balanceElement = document.getElementById('balance');
                 if (balanceElement) {
-                    // Retrieve current balance from HTML element
-                    const currentBalance = parseFloat(balanceElement.textContent);
-                    // Calculate new balance without affecting the current value
-                    const newBalance = currentBalance + 0.002;
-                    // Update balance in the HTML element
                     balanceElement.textContent = newBalance.toFixed(10);
                 }
 
                 const currentTime = new Date().toISOString();
                 // Update balance and lastBtcAdditionTime in Firestore
                 await updateDoc(userRef, {
+                    balance: newBalance, // Update the balance field in Firestore
                     btcBalance: currentBtcBalance + btcToAdd,
                     lastBtcAdditionTime: currentTime
                 });
@@ -2542,8 +2858,7 @@ const updateBtcBalanceInFirestore = async (btcToAdd) => {
 
 
 
-
-const getLastBtcAdditionClickTimeFromFirestore = async () => {
+  const getLastBtcAdditionClickTimeFromFirestore = async () => {
     const user = auth.currentUser;
     if (user) {
         const userEmail = user.email;
@@ -2575,10 +2890,10 @@ addBtcButton.addEventListener('click', async () => {
             const remainingHours = Math.floor(remainingTime / (60 * 60 * 1000));
             const remainingMinutes = Math.floor((remainingTime % (60 * 60 * 1000)) / (60 * 1000));
             const remainingSeconds = Math.floor((remainingTime % (60 * 1000)) / 1000);
-            messageContainer.textContent = `Please wait ${remainingHours} hours and ${remainingMinutes} minutes and ${remainingSeconds} seconds before adding more balance.`;
+            messageContainer.textContent = ` ${remainingHours}  ${remainingMinutes}  ${remainingSeconds} `;
             setTimeout(() => {
                 messageContainer.textContent = '';
-            }, 3000);
+            }, 1000);
             return;
         }
     }
@@ -2599,10 +2914,10 @@ window.addEventListener('load', async () => {
             const remainingHours = Math.floor(remainingTime / (60 * 60 * 1000));
             const remainingMinutes = Math.floor((remainingTime % (60 * 60 * 1000)) / (60 * 1000));
             const remainingSeconds = Math.floor((remainingTime % (60 * 1000)) / 1000);
-            messageContainer.textContent = `Please wait ${remainingHours} hours and ${remainingMinutes} minutes and ${remainingSeconds} seconds before adding more balance.`;
+            messageContainer.textContent = `  ${remainingHours} ${remainingMinutes}  ${remainingSeconds} .`;
             setTimeout(() => {
                 messageContainer.textContent = '';
-            }, 3000);
+            }, 1000);
         }
     }
 });
@@ -2636,6 +2951,21 @@ window.addEventListener('load', async () => {
             }
         }
     }, 1000);
+});
+
+// إضافة حدث focus لنافذة المتصفح للتحقق من عودة المستخدم إلى التطبيق
+window.addEventListener('focus', async () => {
+    const lastBtcAdditionClickTime = await getLastBtcAdditionClickTimeFromFirestore();
+    if (lastBtcAdditionClickTime !== null) {
+        const currentTime = new Date().getTime();
+        const twentyFourHours = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+        const elapsedTime = currentTime - new Date(lastBtcAdditionClickTime).getTime();
+        if (elapsedTime < twentyFourHours) {
+            const remainingTime = twentyFourHours - elapsedTime;
+            updateCountdownTimer(remainingTime);
+            startCountdown(remainingTime);
+        }
+    }
 });
 
 
@@ -3085,8 +3415,42 @@ function validateInput(input) {
 
 // تصفية البيانات المدخلة لمنع هجمات حقن الشفرة
 
+function generateInvitationCode() {
+  // قم بتوليد رمز الدعوة هنا وقم بتعيينه لقيمة الحقل النصي
+  var newInvitationCode = generateCode(); // تخمين الدالة
+
+  // قم بتعيين القيمة المولدة لحقل النص
+  document.getElementById("invitationCode").value = newInvitationCode;
+}
+
+// وظيفة تخمينية لتوليد رمز الدعوة
+function generateCode() {
+  // يمكنك استبدال هذا بطريقة توليد رمز دعوة فعلية
+  return "7M4LYdxg";
+}
 
 
+
+
+
+
+var submitBtn = document.getElementById('submitBtn');
+var confirmationMessage = document.getElementById('confirmationMessage');
+
+// إضافة حدث النقر
+submitBtn.addEventListener('click', function() {
+  // تعطيل الزر
+  submitBtn.disabled = true;
+
+  // عرض رسالة التأكيد
+  confirmationMessage.style.display = 'block';
+
+  // إعادة تفعيل الزر بعد ثواني معينة
+  setTimeout(function() {
+    submitBtn.disabled = false;
+    confirmationMessage.style.display = 'none';
+  }, 3000); // 3 ثواني
+});
 
 </script>
 </body>

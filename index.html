@@ -222,13 +222,15 @@
 
 
   
-<p style="color: white; position: absolute; top: 25.9%; z-index: 9999; left: 2%; font-size: 1.8vw; background-color: red;">XSUN TOKEN TOTAL SUPPLY 36666</p>
+<p style="color: black; position: absolute; top: 25.9%; z-index: 9999; left: 2%; font-size: 1.8vw; background-color: red; color: white; ">XSUN TOKEN TOTAL  SUPPLY <span style="font-size: 2.3vw;"> </span>
+<span style="font-size: 2.05vw;">36666</span>
+</p>
+
 
   
   
-  
 
-  
+
 <p style="color: black; position: absolute; top: 20.7%; z-index: 9999; left: 2%; font-size: 1.8vw; background-color: seagreen;">NETWORK NEAR BLOCKCHAIN</p>
 
 
@@ -240,7 +242,7 @@
 
 
 
-<div style="position: absolute; top: 76.7vh; left: 27vw; z-index: 9999;">
+<div style="position: absolute; top: 80.4vh; left: 27vw; z-index: 9999;">
   <img src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/immutable-x-imx-glass-crypto-coin-3d-illustration-free-png.png?alt=media&token=5cf5a220-fed2-41b8-a1fe-035e0e3c9a6e" alt="icon" width="39vw" height="39vw">
 </div>
 
@@ -351,7 +353,7 @@
 
   
   
- <button id="withdrawButton" disabled onclick="withdrawAmount()" class="disabled" style="color: white; position: absolute; top: 84.3%; left: 13%; transform: translate(-50%, -50%); z-index: 9999; padding: 2vw 3vw; border: none; border-radius: 1vw; background-color: lightslategray;">Withdraw<span id="withdrawMessage" style="display: none;"></span></button>
+ <button id="withdrawButton" disabled onclick="withdrawAmount()" class="disabled" style="color: white; position: absolute; top: 88.3%; left: 13%; transform: translate(-50%, -50%); z-index: 9999; padding: 2vw 3vw; border: none; border-radius: 1vw; background-color: lightslategray;">Withdraw<span id="withdrawMessage" style="display: none;"></span></button>
 
   
   
@@ -399,7 +401,7 @@
 
 
     <!-- Button to show/hide sidebar -->
-    <div class="menu-button" onclick="toggleSidebar()" style= "margin-left: 3vw; margin-top: 1.2vw; background-color: #333;">&#9776;</div>
+    <div class="menu-button" onclick="toggleSidebar()" style= "margin-left: 3vw; margin-top: 4vw; background-color: black; border-radius: 5vw; border: red;">&#9776;</div>
     
 
 
@@ -730,7 +732,7 @@
       <tr>   
         
         <td><div style="display: flex; align-items: center;"><img class="currency-icon" src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/swiss-flag-round-badge_1308-72045__1_-removebg-preview.png?alt=media&token=b4105cd6-a982-4fd3-9e5c-f7032b9200b2" alt="" style="width: 41px; height: 41px; margin-right: 5px;"> 𝐒𝐖𝐙</div></td>
-        <td class="balance" style="font-size: 4.5vw; color: white;">5000000</td>
+        <td class="balance" id="Swiza" style="font-size: 4.5vw; color: white;">5000000</td>
 
 <td style="font-size: 4.5vw; color: white;">$00.00</td>
 
@@ -738,9 +740,9 @@
       </tr>
       <tr>
         <td><div style="display: flex; align-items: center;"><img class="currency-icon" src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D8%A8%D8%AF%D9%88%D9%86%20%D8%B9%D9%86%D9%88%D8%A7%D9%86%20(62).png?alt=media&token=74e2d28f-c0fc-47c2-95da-8032ba71c346" alt="" style="width: 40px; height: 40px; margin-right: 5px;"> 𝐒𝐖𝐄𝐀𝐓</div></td>
-        <td class="balance" style="font-size: 4.5vw; color: white;">50.00</td>
+        <td class="balance" id="Usdt" style="font-size: 4.5vw; color: white;">50.00</td>
 <td style="font-size: 4.5vw; color: wheat;">$00.00</td>
-        <td><button onclick="openPopup('Near')" style="background-color: blue; color: white; padding: 5px 10px; border: none; border-radius: 5px;">Send</button></td>
+        <td><button onclick="openPopup('Usdt')" style="background-color: blue; color: white; padding: 5px 10px; border: none; border-radius: 5px;">Send</button></td>
       </tr>
       <tr>
 
@@ -751,7 +753,7 @@
 
         <td><div style="display: flex; align-items: center;"><img class="currency-icon" src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/near-9828546-7947908.png?alt=media&token=0c6a6e03-4528-4f67-97a6-2f74e2b17543" alt="" style="width: 40px; height: 40px; margin-right: 5px;"> 𝐍𝐄𝐀𝐑</div></td>
        
-        <td class="balance" style="font-size: 4.5vw; color: white;">00.15</td>
+        <td class="balance" id="Near" style="font-size: 4.5vw; color: white;">00.15</td>
 <td style="font-size: 4.5vw; color: white;">$00.00</td>
         <td><button onclick="openPopup('Near')" style="background-color: blue; color: white; padding: 5px 10px; border: none; border-radius: 5px;">Send</button></td>
       </tr>
@@ -791,7 +793,7 @@
   <input type="text" id="quantity" name="quantity" style="margin-bottom: 10px; width: 280px;"><br>
 
   <!-- Select Network -->
-  <label for="network" style="margin-bottom: 5px;">Network:</label><br>
+  <label for="network" style="margin-bottom: 5px; color: black;">Network</label><br>
   <select id="network" style="margin-bottom: 10px; width: 280px;">
     <option value="Bsc20">Bsc20</option>
     <option value="Erc20">Erc20</option>
@@ -817,17 +819,20 @@
   <div id="nearButton" style="display: none;">
     <button onclick="sendNear()" style="background-color: blue; color: white; padding: 5px 10px; border: none; border-radius: 5px; margin-top: 10px;">Send</button>
   </div>
+  
+  
 
   <!-- Usdt Button -->
   <div id="usdtButton" style="display: none;">
     <button onclick="sendUsdt()" style="background-color: blue; color: white; padding: 5px 10px; border: none; border-radius: 5px; margin-top: 10px;">Send</button>
-  </div>
-
+  
+</div>
   <!-- Add buttons for other currencies here -->
 
   <button onclick="cancel()" style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 5px; margin-top: 20px;">Cancel</button>
   <p id="reminder" style="color: red; display: none; margin-top: 10px;">Please enter address and currency name!</p>
 </div>
+
 
 
 
@@ -950,6 +955,7 @@
 <div id="confirmationMessage" class="confirmationMessage" style="display: none;">  
     𝐈𝐃𝐄𝐍𝐓𝐈𝐓𝐘 𝐕𝐄𝐑𝐈𝐅𝐈𝐂𝐀𝐓𝐈𝐎𝐍<br>𝐓𝐄𝐌𝐏𝐎𝐑𝐀𝐑𝐈𝐋𝐘 𝐔𝐍𝐀𝐕𝐀𝐈𝐋𝐀𝐁𝐋𝐄
 </div>
+
 
 
 
@@ -3334,87 +3340,9 @@ function showInviteFriends() {
 }  
   
   
-function openPopup(currency) {
-  var popup = document.getElementById('popup');
-  var reminder = document.getElementById('reminder');
-  var addressInput = document.getElementById('address');
-  var quantityInput = document.getElementById('quantity');
-  var swizaButton = document.getElementById('swizaButton');
-  var xsunButton = document.getElementById('xsunButton');
-  var bitcoinButton = document.getElementById('bitcoinButton');
-  var nearButton = document.getElementById('nearButton');
-  var usdtButton = document.getElementById('usdtButton');
-
-  popup.style.display = 'block';
-  reminder.style.display = 'none';
-  addressInput.value = '';
-  quantityInput.value = '';
-
-  // Hide all buttons first
-  swizaButton.style.display = 'none';
-  xsunButton.style.display = 'none';
-  bitcoinButton.style.display = 'none';
-  nearButton.style.display = 'none';
-  usdtButton.style.display = 'none';
-
-  // Show the button corresponding to the selected currency
-  if (currency === 'Swiza') {
-    swizaButton.style.display = 'block';
-    document.getElementById('network').innerHTML = '<option value="Bsc20">Bsc20</option><option value="Near">Near</option>';
-  } else if (currency === 'Xsun') {
-    xsunButton.style.display = 'block';
-    document.getElementById('network').innerHTML = '<option value="Erc20">Erc20</option><option value="Bsc20">Bsc20</option><option value="Near">Near</option>';
-  } else if (currency === 'Bitcoin') {
-    bitcoinButton.style.display = 'block';
-    document.getElementById('network').innerHTML = '<option value="Btc">Btc</option>';
-  } else if (currency === 'Near') {
-    nearButton.style.display = 'block';
-    document.getElementById('network').innerHTML = '<option value="Near">Near</option>';
-  } else if (currency === 'Usdt') {
-    usdtButton.style.display = 'block';
-    document.getElementById('network').innerHTML = '<option value="Tron">Tron</option><option value="Bsc20">Bsc20</option><option value="Erc20">Erc20</option>';
-  }
-  // Add more conditions for other currencies
-}
-
-function sendSwiza() {
-  showMessage();
-}
-
-function sendXsun() {
-  showMessage();
-}
-
-function sendBitcoin() {
-  showMessage();
-}
-
-function sendNear() {
-  showMessage();
-}
-
-function sendUsdt() {
-  showMessage();
-}
-
-function showMessage() {
-  document.getElementById('message').innerText = 'Not open yet';
-  document.getElementById('message').style.display = 'block';
-  setTimeout(function() {
-    document.getElementById('message').style.display = 'none';
-  }, 4000);
-}
-
-function cancel() {
-  document.getElementById('popup').style.display = 'none';
-}
 
 function validateInput(input) {
 }
-
-
-// تصفية البيانات المدخلة لمنع هجمات حقن الشفرة
-
 function generateInvitationCode() {
   // قم بتوليد رمز الدعوة هنا وقم بتعيينه لقيمة الحقل النصي
   var newInvitationCode = generateCode(); // تخمين الدالة
@@ -3451,6 +3379,140 @@ submitBtn.addEventListener('click', function() {
     confirmationMessage.style.display = 'none';
   }, 3000); // 3 ثواني
 });
+
+
+
+
+
+
+
+  // Function to fill the quantity input with the balance of the selected currency
+  function fillQuantity(currency) {
+    var balance = 0;
+    
+    // Determine the balance based on the selected currency
+    switch(currency) {
+      case "Xsun":
+        balance = parseFloat(document.getElementById("totalBalance").innerText);
+        break;
+      case "Bitcoin":
+        balance = parseFloat(document.getElementById("btcBalanceAmount").innerText);
+        break;
+      case "Swiza":
+        balance = parseFloat(document.getElementById("Swiza").innerText);
+        break;
+      case "Near":
+        balance = parseFloat(document.getElementById("Near").innerText);
+        break;
+      case "Usdt":
+        balance = parseFloat(document.getElementById("Usdt").innerText);
+        break;
+      // Add cases for other currencies if needed
+    }
+    
+    // Fill the quantity input with the balance
+    document.getElementById("quantity").value = balance;
+  }
+
+  // Function to open the popup with the selected currency
+  function openPopup(currency) {
+    var popup = document.getElementById('popup');
+    var reminder = document.getElementById('reminder');
+    var addressInput = document.getElementById('address');
+    var quantityInput = document.getElementById('quantity');
+    var swizaButton = document.getElementById('swizaButton');
+    var xsunButton = document.getElementById('xsunButton');
+    var bitcoinButton = document.getElementById('bitcoinButton');
+    var nearButton = document.getElementById('nearButton');
+    var usdtButton = document.getElementById('usdtButton');
+    var networkDropdown = document.getElementById("network");
+
+    popup.style.display = 'block';
+    reminder.style.display = 'none';
+    addressInput.value = '';
+    quantityInput.value = '';
+
+    // Store the current network value
+    var currentNetwork = networkDropdown.value;
+
+    // Hide all buttons first
+    swizaButton.style.display = 'none';
+    xsunButton.style.display = 'none';
+    bitcoinButton.style.display = 'none';
+    nearButton.style.display = 'none';
+    usdtButton.style.display = 'none';
+
+    // Show the button corresponding to the selected currency
+    if (currency === 'Swiza') {
+      swizaButton.style.display = 'block';
+      fillNetworkOptions(['Bsc20', 'Near']);
+    } else if (currency === 'Xsun') {
+      xsunButton.style.display = 'block';
+      fillNetworkOptions(['Erc20', 'Bsc20', 'Near' , 'Trc20']);
+    } else if (currency === 'Bitcoin') {
+      bitcoinButton.style.display = 'block';
+      fillNetworkOptions(['Btc']);
+    } else if (currency === 'Near') {
+      nearButton.style.display = 'block';
+      fillNetworkOptions(['Near']);
+    } else if (currency === 'Usdt') {
+      usdtButton.style.display = 'block';
+      fillNetworkOptions(['Near',, 'Erc20']);
+    }
+
+    // Restore the current network value
+    var currentNetworkIndex = Array.from(networkDropdown.options).findIndex(option => option.value === currentNetwork);
+    networkDropdown.selectedIndex = currentNetworkIndex !== -1 ? currentNetworkIndex : 0;
+
+    // Fill the quantity input with the balance of the selected currency
+    fillQuantity(currency);
+  }
+
+  // Function to fill the network dropdown with options
+  function fillNetworkOptions(options) {
+    var networkDropdown = document.getElementById("network");
+    networkDropdown.innerHTML = options.map(option => `<option value="${option}">${option}</option>`).join('');
+  }
+
+  // Function to send Swiza
+  function sendSwiza() {
+    showMessage();
+  }
+
+  // Function to send Xsun
+  function sendXsun() {
+    showMessage();
+  }
+
+  // Function to send Bitcoin
+  function sendBitcoin() {
+    showMessage();
+  }
+
+  // Function to send Near
+  function sendNear() {
+    showMessage();
+  }
+
+  // Function to send Usdt
+  function sendUsdt() {
+    showMessage();
+  }
+
+  // Function to show a message
+  function showMessage() {
+    document.getElementById('message').innerText = 'Not open yet';
+    document.getElementById('message').style.display = 'block';
+    setTimeout(function() {
+      document.getElementById('message').style.display = 'none';
+    }, 4000);
+  }
+
+  // Function to cancel the popup
+  function cancel() {
+    document.getElementById('popup').style.display = 'none';
+  }
+
 
 </script>
 </body>

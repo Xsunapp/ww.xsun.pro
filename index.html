@@ -194,7 +194,6 @@
 
 
 
-
 <div style="position: absolute; text-align: center; top: 42.5%; left: 120vw; transform: translate( -50vw , 40vw); z-index: 9999; display: flex; flex-direction: row; justify-content: center;">
 
 
@@ -215,7 +214,9 @@
   
   
   
-  
+<p id="totalMiningCount" style="color: black; position: absolute; top: 84%; z-index: 9999; right: 4%; font-size: 2vw; background-color: white; color: black;">~ 𝚃𝚘𝚝𝚊𝚕 𝚇𝚜𝚞𝚗 𝙼𝚒𝚗𝚎𝚍 ~
+:<span id="minedCoinsTotal"></span></p>
+
 
 
   
@@ -248,7 +249,7 @@
 
 
 
-<div style="position: absolute; top: 76.5vh; left: 27vw; z-index: 9999;">
+<div style="position: absolute; top: 76.6vh; left: 27vw; z-index: 9999;">
   <img src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/immutable-x-imx-glass-crypto-coin-3d-illustration-free-png.png?alt=media&token=5cf5a220-fed2-41b8-a1fe-035e0e3c9a6e" alt="icon" width="39vw" height="39vw">
 </div>
 
@@ -301,7 +302,7 @@
     <p style="font-size: 7vw; margin: 1vw 0 0 0; background-color: black; margin-left: 1vw;">Balance: <span id="balance">0.00000000</span></p>
    
 
-    <p id="balanceInUSD" style="font-size: 7vw; margin: 1vw 0; width: 93%; margin-left: 1vw; background-color: black;">Balance in USD: $0.00</p>
+    <p id="balanceInUSD" style="font-size: 6.5vw; margin: 1vw 0; width: 93%; margin-left: 1vw; background-color: black;">Balance in USD: $0.00</p>
     
   </div>
 </div>
@@ -397,7 +398,7 @@
 
   <button onclick="showKyc()" style=" font-size: vw; background-color: blueviolet;">🔐 KYC</button>
   <button onclick="showEarnings()" style="font-size: vw; background-color: red;"> 💳Wallet</button>
-  <button onclick="showRoadmap()" style=" font-size: vw; margin-right: 3.5%; background-color: midnightblue;">🗺️ Roadmap</button>
+  <button onclick="showRoadmap()" style=" font-size: vw; margin-right: 3.5%;  background-color: midnightblue;">🗺️ Roadmap</button>
 
 </div>
 
@@ -523,7 +524,6 @@
 
  <hr style="border: none; border-bottom: 1vw solid ; margin: 0vw 0; width: 92%; position: relative; left: 4vw; color: black; ">
  
-
 
 
 
@@ -2144,7 +2144,7 @@ function displayBalance() {
     const balanceIncreaseRate = 0.0;
     const currentBalance = parseFloat(balanceElement.textContent);
     const newBalance = currentBalance + balanceIncreaseRate;
-    balanceElement.textContent = newBalance.toFixed(10);
+    balanceElement.textContent = newBalance.toFixed(9);
     updateBalanceInUSD();
 }
 
@@ -3168,12 +3168,26 @@ const verifyIdentity = () => {
 
   
 
-  
+
+// استعادة بيانات جميع المستخدمين من قاعدة البيانات
+
+const querySnapshot = await getDocs(usersRef);
+
+let totalMinedXsun = 0;
+
+// حلق عبر نتائج الاستعلام وجمع عدد عملات Xsun المعدنة
+querySnapshot.forEach((doc) => {
+    const userData = doc.data();
+    const balanceXsun = userData.balance || 0;
+    const referralBalanceXsun = userData.referralBalance || 0;
+    totalMinedXsun += balanceXsun + referralBalanceXsun;
+});
+
+// عرض إجمالي عدد عملات Xsun المعدنة في الصفحة
+const minedXsunTotalSpan = document.getElementById("minedCoinsTotal");
+minedXsunTotalSpan.textContent = totalMinedXsun;
 
 
-        
-
-// عرض قيمة رمز الدعوة داخل صفحة "Invite Friends"
 
     </script>
 </body>

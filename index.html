@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xsun Token</title>
+    
+  
 
 
-
+    </head>
+    <body>
+      
+    </body>
+    </html>
 
     <!-- هنا يتم وضع الأنماط الخاصة بوسائط الاعلام -->
     <style>
@@ -208,13 +214,23 @@
     </div>
   </div>
   
+<div onclick="copyContract()" style="cursor: pointer; position: absolute; top: 87.7%; z-index: 9999; right: 5%; font-size: 2.5vw; background-color: transparent; color: white; padding: 10px; border: 1px solid black; border-radius: 5px; display: flex; align-items: center; touch-action: none;">
+  <span style="margin-right: 10px;">Contract adresse bsc20:</span>
+  <textarea id="contractAddress" readonly style="flex: 1; border: none; background-color: transparent; font-size: 1vw; color: white;">0xEf06e2D9C18680316E63944be3d881093Aa8d542</textarea>
+  <div draggable="false"> <!-- هذا العنصر يمثل المربع الذي يتم تحريكه -->
+    <!-- الكود الخاص بالمربع -->
+  </div>
+</div>
+
+
+
+
+
   
   
   
   
-  
-  
-<p id="totalMiningCount" style="color: black; position: absolute; top: 84%; z-index: 9999; right: 4%; font-size: 2vw; background-color: white; color: black;">~ 𝚃𝚘𝚝𝚊𝚕 𝚇𝚜𝚞𝚗 𝙼𝚒𝚗𝚎𝚍 ~
+<p id="totalMiningCount" style="color: black; position: absolute; top: 27.4%; z-index: 9999; left: 2%; font-size: 2vw; background-color: transparent; color: white;">~ 𝚃𝚘𝚝𝚊𝚕 𝚇𝚜𝚞𝚗 𝙼𝚒𝚗𝚎𝚍 ~
 :<span id="minedCoinsTotal"></span></p>
 
 
@@ -223,11 +239,12 @@
 
 
   
-<p style="color: black; position: absolute; top: 25.9%; z-index: 9999; left: 2%; font-size: 2vw; background-color: red; color: whitesmoke;">✨️~ 𝚇𝚂𝚄𝙽 𝚃𝙾𝙺𝙴𝙽 𝙲𝚁𝚈𝙿𝚃𝙾 𝙳𝙸𝙶𝙸𝚃𝙰𝙻~✨️
+<p style="color: black; position: absolute; top: 21%; z-index: 9999; left: 2%; font-size: 2vw; background-color: transparent; color: whitesmoke;">✨️~ 𝚇𝚂𝚄𝙽 𝚃𝙾𝙺𝙴𝙽 𝙲𝚁𝚈𝙿𝚃𝙾 𝙳𝙸𝙶𝙸𝚃𝙰𝙻~✨️
 
 
 
 </p>
+
 
 <span style="font-size: 3.6vw; color:white; background-color: ; color: blueviolet; border-radius: 2vw; position: absolute; top: 20.8%; right: 7%; text-align: center;">
   <span style="font-size: 5vw;">️ 🔗</span><br>
@@ -237,7 +254,7 @@
 
 
 
-<p style="color: black; position: absolute; top: 20.7%; z-index: 9999; left: 2%; font-size: 1.8vw; background-color: seagreen;">⚙ NETWORK NEAR BLOCKCHAIN ⚙</p>
+<p style="color: white; position: absolute; top: 24.5%; z-index: 9999; left: 2%; font-size: 1.8vw; background-color: transparent;">⚙ NETWORK NEAR BLOCKCHAIN-BSC20-⚙</p>
 
 
 
@@ -253,6 +270,10 @@
   <img src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/immutable-x-imx-glass-crypto-coin-3d-illustration-free-png.png?alt=media&token=5cf5a220-fed2-41b8-a1fe-035e0e3c9a6e" alt="icon" width="39vw" height="39vw">
 </div>
 
+
+<a href="https://bscscan.com/token/0xef06e2d9c18680316e63944be3d881093aa8d542" target="_blank" rel="noopener noreferrer" style="position: absolute; top: 78vh; right: 7vw; z-index: 9999;">
+  <img src="https://firebasestorage.googleapis.com/v0/b/xsun-b171d.appspot.com/o/1_RbK1YYzgQg6uni0TXU4Ghw.png?alt=media&token=3a23e26f-98dc-45ea-afd8-caae91cf59e5" alt="icon" width="25vw" height="25vw">
+</a>
 
 
 
@@ -296,19 +317,20 @@
 
 
 <div style="position: absolute; top: 32.5%; left: 2%; width: 95vw; text-align: left;  ">
-  <div class="info-box" style="margin-top: 0px; background-color: #333; padding: 2vw; border-radius: 5vw; border: none;">
-    <p style="font-size: 7vw; margin: 0; background-color: black; margin-left: 1vw;">Time Left: <span id="countdownContainer"></span></p>
+  <div class="info-box" style="margin-top: 0px; background-color: transparent; padding: 2vw; border-radius: 5vw; border: none;">
 
-    <p style="font-size: 7vw; margin: 1vw 0 0 0; background-color: black; margin-left: 1vw;">Balance: <span id="balance">0.00000000</span></p>
+    <p style="font-size: 7vw; margin: 0; background-color: white; margin-left: -1vw; width: 96%; color: black">Time Left <span id="countdownContainer"></span></p>
+
+    <p style="font-size: 7vw; margin: 1vw 0 0 0; background-color: white; margin-left: -1vw; width: 96%; color: black">Balance: <span id="balance">0.0000000</span></p>
    
 
-    <p id="balanceInUSD" style="font-size: 6.5vw; margin: 1vw 0; width: 93%; margin-left: 1vw; background-color: black;">Balance in USD: $0.00</p>
+    <p id="balanceInUSD" style="font-size: 6.5vw; margin: 1vw 0; width: 96%; margin-left: -1vw; background-color: white; color: black">Balance in USD: $0.00</p>
     
   </div>
 </div>
 
 
-<button id="addBtcButton" style="background-color: mediumseagreen; font-size: 3.5vw; z-index: 9999; position: absolute; top: 61.3%; left: 37%; padding: 2vw 3vw; border: none; border-radius: 1vw; box-shadow: 0.2vw 0.4vw 0.8vw rgba(0, 0, 0, 0.3); cursor: pointer; color: white;">Start Mining</button>
+<button id="addBtcButton" style="background-color: seagreen; font-size: 3.5vw; z-index: 9999; position: absolute; top: 61.3%; left: 37%; padding: 2vw 3vw; border: none; border-radius: 1vw; box-shadow: 0.2vw 0.4vw 0.8vw rgba(0, 0, 0, 0.3); cursor: pointer; color: white;">Start Mining</button>
 
 
 
@@ -537,7 +559,7 @@
 
 
     <div style="background-color: black; padding: 10px;">
-        <p style="font-size: 4.5vw; color: red ; background-color: white; width: 22%;">𝐉𝐮𝐥𝐲 𝟐𝟎𝟐𝟒</p>
+        <p style="font-size: 4.5vw; color: red ; background-color: white; width: 22%;">𝐉𝐮𝐥𝐲 𝟐𝟎𝟐𝟓</p>
         <p style="color: #ffffff; font-size: 4vw;">𝐆𝐥𝐨𝐛𝐚𝐥 𝐀𝐜𝐭𝐢v𝐞  𝐔𝐬𝐞𝐫𝐬<br>𝐑𝐞𝐚𝐜𝐡:𝟎.𝟐𝐌
 
 
@@ -551,7 +573,7 @@
     </div>
 
     <div style="background-color: black; padding: 10px;">
-        <p style="font-size: 4.5vw; color: red; background-color: white; width: 30%;">𝐎𝐜𝐭𝐨𝐛𝐞𝐫 𝟐𝟎𝟐𝟒</p>
+        <p style="font-size: 4.5vw; color: red; background-color: white; width: 30%;">𝐎𝐜𝐭𝐨𝐛𝐞𝐫 𝟐𝟎𝟐𝟓</p>
         <p style="color: #ffffff; font-size: 4vw;">𝐋𝐚𝐮𝐧𝐜𝐡𝐢𝐧𝐠 𝐚𝐧 𝐈𝐧𝐭𝐞𝐥𝐥𝐢𝐠𝐞𝐧𝐭 𝐁𝐨𝐭 𝐭𝐨 𝐭𝐫𝐚𝐧𝐬𝐟𝐨𝐫𝐦 𝐫𝐞𝐚𝐥 𝐢𝐦𝐚𝐠𝐞𝐬 𝐢𝐧𝐭𝐨 𝐜𝐚𝐫𝐭𝐨𝐨𝐧𝐬 𝐚𝐧𝐝 𝐝𝐢𝐫𝐞𝐜𝐭𝐥𝐲 𝐬𝐞𝐧𝐝 𝐭𝐡𝐞𝐦 𝐭𝐨 𝐎𝐩𝐞𝐧𝐒𝐞𝐚⚡️</p>
         
           </h2>
@@ -560,7 +582,7 @@
     </div>
 
     <div style="background-color: black; padding: 10px;">
-        <p style="font-size: 4.5vw; color: red; background-color: white; width: 35%">𝐃𝐞𝐜𝐞𝐦𝐛𝐞𝐫 𝟐𝟎𝟐𝟒</p>
+        <p style="font-size: 4.5vw; color: red; background-color: white; width: 35%">𝐃𝐞𝐜𝐞𝐦𝐛𝐞r 𝟐𝟎𝟐𝟓</p>
         <p style="color: #ffffff; font-size: 4vw;">𝐋𝐚𝐮𝐧𝐜𝐡𝐢𝐧𝐠 𝐚𝐧 𝐈𝐧𝐭𝐞𝐥𝐥𝐢𝐠𝐞𝐧𝐭 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐁𝐨𝐭, 𝐒𝐔𝐍 𝐆𝐏𝐓, 𝐟𝐢𝐥𝐥𝐞𝐝 𝐰𝐢𝐭𝐡 𝐢𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧 𝐚𝐧𝐝 𝐢𝐦𝐚𝐠𝐢𝐧𝐚𝐭𝐢𝐨𝐧🤖🤖 
         
           </h2>
@@ -569,7 +591,7 @@
     </div>
 
     <div style="background-color: black; padding: 10px;">
-        <p style="font-size: 4.5vw; color: red; background-color: white; width: 33%">𝐅𝐞𝐛𝐫𝐮𝐚𝐫𝐲 𝟐𝟎𝟐𝟓</p>
+        <p style="font-size: 4.5vw; color: red; background-color: white; width: 33%">𝐅𝐞𝐛𝐫𝐮𝐚𝐫𝐲 𝟐𝟎𝟐𝟔</p>
         <p style="color: #ffffff; font-size: 4vw;">
           𝐀𝐝𝐝 (𝟏𝟎,𝟎𝟎𝟎) 𝐍𝐞𝐚𝐫 𝐋𝐢𝐪𝐮𝐢𝐝𝐢𝐭𝐲 𝐃𝐄𝐗 𝐓𝐨𝐨𝐥𝐬 𝐚𝐧𝐝<br>𝐎𝐩𝐞𝐧 𝐔𝐬𝐞𝐫𝐬 𝐖𝐢𝐭𝐡𝐝𝐫𝐚𝐰🎉</p>
           
@@ -582,7 +604,7 @@
 
 
 <div style="background-color: black; padding: 10px;">
-  <p style="font-size: 4.5vw; color: red; background-color: white; width: 27%">𝐌𝐚𝐫𝐜𝐡 𝟐𝟎𝟐𝟓</p>
+  <p style="font-size: 4.5vw; color: red; background-color: white; width: 27%">𝐌𝐚𝐫𝐜𝐡 𝟐𝟎𝟐𝟔</p>
   <p style="color: white; font-size: 4vw;">𝐌𝐲 𝐓𝐨𝐤𝐞𝐧 𝐋𝐢𝐬𝐭𝐢𝐧𝐠 𝐨𝐧 𝟑 𝐌𝐚𝐣𝐨𝐫 𝐄𝐱𝐜𝐡𝐚𝐧𝐠𝐞𝐬<br>🔁📉📈</p>
     </h2>
       <hr style="border: none; border-bottom: 1vw solid black; margin: 1vw 0; width: 100%;">
@@ -590,7 +612,7 @@
 </div>
 
     <div style="background-color: black; padding: 10px;">
-        <p style="font-size: 4.5vw; color: red; background-color: white; width: 24%;">𝐀𝐩𝐫𝐢𝐥 𝟐𝟎𝟐𝟓</p>
+        <p style="font-size: 4.5vw; color: red; background-color: white; width: 24%;">𝐀𝐩𝐫𝐢𝐥 𝟐𝟎𝟐𝟔</p>
         <p style="color: white; background-color: black font-size: 4vw;">𝐔𝐩𝐠𝐫𝐚𝐝𝐞🔄🏁</p>
           </h2>
       <hr style="border: none; border-bottom: 2vw solid black; margin: 1vw 0; width: 100%;">
@@ -1959,6 +1981,26 @@ h1 {
    width: 60%;
 }
   
+  
+/* Style for copied message */
+.copied-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  z-index: 9999;
+}
+  
+  
+  
+  
+  
+  
    </style>
    
    
@@ -2144,7 +2186,7 @@ function displayBalance() {
     const balanceIncreaseRate = 0.0;
     const currentBalance = parseFloat(balanceElement.textContent);
     const newBalance = currentBalance + balanceIncreaseRate;
-    balanceElement.textContent = newBalance.toFixed(9);
+    balanceElement.textContent = newBalance.toFixed(7);
     updateBalanceInUSD();
 }
 
@@ -2811,7 +2853,7 @@ countdownTimer.textContent = '24:00:00'; // Set initial countdown time
 countdownTimer.style.fontSize = '7vw'; // Increase font size
 countdownTimer.style.fontFamily = 'Arial, sans-serif'; // Choose a professional font family
 countdownTimer.style.fontWeight = 'bold'; // Make the font bold for emphasis
-countdownTimer.style.color = 'white'; // Set font color to white
+countdownTimer.style.color = 'black'; // Set font color to white
 countdownContainer.appendChild(countdownTimer); // Add countdown timer to countdown container
 
 function updateCountdownTimer(remainingTime) {
@@ -3535,6 +3577,25 @@ submitBtn.addEventListener('click', function() {
   function cancel() {
     document.getElementById('popup').style.display = 'none';
   }
+
+
+  function copyContract() {
+  var contractAddress = document.getElementById('contractAddress');
+  contractAddress.select();
+  document.execCommand('copy');
+  
+  // Create copied message element
+  var copiedMessage = document.createElement('div');
+  copiedMessage.textContent = 'Copied!';
+  copiedMessage.classList.add('copied-message');
+  document.body.appendChild(copiedMessage);
+  
+  // Remove copied message after 2 seconds
+  setTimeout(function(){
+    copiedMessage.remove();
+  }, 2000);
+}
+
 
 
 </script>
